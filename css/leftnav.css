@@ -1,0 +1,45 @@
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  padding: 2rem 1rem;
+}
+.sidebar::-webkit-scrollbar{
+  display: none !important;
+}
+
+/* Active menu item */
+.nav-link.active {
+  font-weight: 600;
+  color: #fff !important; /* text white */
+  background-color: #02060C !important; /* dark background */
+  border-radius: 8px;
+}
+
+/* Each menu item */
+.sidebar .nav-link {
+  width: 240px;
+  color: #02060C;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 12px 20px; 
+  margin: 8px 0; 
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.sidebar .nav-link img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hover effect */
+
+
+/* Logo alignment */
+.sidebar img.px-4 {
+  max-width: 150px;
+}

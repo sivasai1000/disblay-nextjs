@@ -1,0 +1,389 @@
+/* ===== User Combo Details Page ===== */
+.user-combo {
+    max-width: 788px;
+    margin: 0 auto;
+    /* center horizontally */
+    background: #fff;
+    min-height: 100vh;
+    
+    font-family: "Manrope", sans-serif;
+}
+
+/* Back + Title */
+.user-combo h5 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #262626;
+}
+
+/* ---------- Banner ---------- */
+.combo-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.combo-img,
+.combo-banner img {
+    width: 460px;
+    height: 393px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* WhatsApp Floating Button */
+
+
+/* ---------- Action Buttons Section ---------- */
+.user-combo .btn {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+}
+
+.user-combo .btn img {
+    margin-right: 6px;
+}
+
+.user-combo .btn-danger {
+    background: #e11d48;
+    border: none;
+    color: #fff;
+}
+
+.user-combo .btn-light {
+    background: #f4f6fb;
+    border: 1px solid #e2e4e9;
+    color: #262626;
+}
+.card-section {
+    background: #fff;
+    border-radius: 12px;
+   
+    padding: 16px 0px;
+}
+.card-section1{
+    background: #F87E7D1A;
+height: 63px;
+justify-content: space-between;
+opacity: 1;
+}
+
+.user-combo .fw-bold.text-success {
+    color: #27a376 !important;
+    font-size: 16px;
+}
+
+/* ---------- Categories ---------- */
+.user-combo .bg-light {
+    background: #f9f5ff !important;
+    border-radius: 8px 8px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b4eff;
+}
+
+.user-combo .border-bottom {
+    border-color: #f1f1f1 !important;
+}
+
+.user-combo .fw-semibold {
+    font-size: 14px;
+    color: #262626;
+}
+
+.user-combo .text-muted.small {
+    font-size: 13px;
+    color: #6c727f !important;
+}
+
+.user-combo .fw-bold {
+    font-size: 14px;
+    color: #262626;
+}
+
+.user-combo iframe {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.user-combo p.small.text-muted {
+    font-size: 12px;
+    color: #525866;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+.usercombo-name {
+
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -1.5%;
+    vertical-align: bottom;
+    color: #0A0D14;
+}
+
+.days-left-label {
+    height: 22px;
+    background: #262626;
+    color: #fff;
+    padding: 4px 10px;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    display: flex;
+    /* enable flex */
+    align-items: center;
+    /* vertical center */
+    justify-content: center;
+}
+
+.card-left {
+    width: 100px;
+    height: 54px;
+    border: 1px solid #E8EFF3
+}
+
+.days-remaining {
+    
+    height: 32px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 19.2px;
+    letter-spacing: 0;
+    color: #262626;
+}
+
+.play-btn {
+    width: 112px;
+    height: 48px;
+    background: #6F70FA1A;
+    font-family: Manrope;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 15.52px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #6F70FA;
+}
+.pdf-btn{
+    width: 102px;
+height: 48px;
+opacity: 1;
+gap: 6px;
+border-radius: 6px;
+background: #F62D2D1A;
+ display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:#F62D2D;
+}
+.enquiry-btn{
+    
+height: 56px;
+opacity: 1;
+gap: 8px;
+border-radius: 10px;
+background: linear-gradient(284.69deg, #F62D2D 7.92%, #FF6161 100%);
+font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #FFFFFF;
+
+
+}
+.play-text{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #6F70FA;
+ display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.pdf-text{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #F62D2D;
+}
+.enquriy-btntext{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #FFFFFF;
+width: 100%;
+}
+.cat-combo{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 14.02px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+}
+.cat-combovalue{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 19.2px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.cat-combovalue1{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 19.2px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #0A8055;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.cat-head{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #111827;
+}
+.cat-head1{
+    font-family: Manrope;
+font-weight: 500;
+font-style: Bold;
+font-size: 16px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #111827;
+}
+.cat-header {
+  min-height: 66px;              /* ensures minimum height */
+  padding: 23px 24px;            /* spacing */
+  gap: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #F1EDFE;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;     /* smooth expansion */
+}
+
+.combodetails-card{
+
+height: 108px;
+opacity: 1;
+padding-top: 12px;
+padding-right: 16px;
+padding-bottom: 12px;
+padding-left: 14px;
+gap: 12px;
+border-radius: 12px;
+border-width: 1px;
+border: 1px solid #E2E9FB
+
+}
+.combo-productname{
+font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+
+}
+.combo-productquant{
+    font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #3A3A3A;
+}
+.combo-productprice{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 16px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #363636;
+
+}
+.custom-dots li {
+  width: auto !important;
+  margin: 0 4px;
+}
+.custom-dots li button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d0d0d0;
+  border: none;
+}
+.custom-dots li.slick-active button {
+  width: 18px;
+  height: 6px;
+  border-radius: 6px;
+  background: #6b4eff;
+}
+
+

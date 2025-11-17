@@ -1,0 +1,10 @@
+.left-image {
+  background: url("../assets/img/creditionals.png") no-repeat center center;
+  background-size: contain;   /* show full image */
+
+  height: 100%;     /* or orange fallback */
+}
+.right-panel {
+  background: #ffffff;
+}
+

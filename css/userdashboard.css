@@ -1,0 +1,310 @@
+.user-home{
+    background: #F4F5FB;
+}
+.user-dashboard {
+  max-width: 788px;
+  margin: 0 auto;
+  background: #f4f6fb;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Banner */
+.user-banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Business Card */
+.user-business-card {
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  padding: 12px 16px;
+  margin-top: -8px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.business-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Tabs */
+.user-tabs .nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  border-radius: 12px;
+  padding: 6px 16px;
+}
+.user-tabs .nav-link.active {
+  background: #334155;
+  color: #fff;
+}
+
+/* Section Title */
+.user-section-title {
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+
+}
+
+/* Product Card */
+.user-product-card {
+  width: 358px;
+  height: 176px;
+  border: 1px solid #ededed;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px #0000000a,
+              0px 2px 22.4px 0px #6161610a;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Image side */
+.product-img {
+  width: 150px;
+  height: 152px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Text side */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+   
+  
+}
+
+.product-name {
+ font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 15px;
+line-height: 15.52px;
+letter-spacing: 0%;
+color: #02060CD9;
+ white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+ 
+
+}
+
+.product-desc {
+ font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 14px;
+letter-spacing: 0%;
+color: #0000008F;
+white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+
+
+}
+
+.product-price {
+  font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 18px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #0E8931;
+
+}
+
+/* Add button */
+.add-btn {
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #DCDCDC;
+  background: #fff;
+}
+.add-text{
+    font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 18px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:  #FF6161 ;
+
+}
+.add-text1{
+    font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 18px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:  #FFf ;
+
+}
+
+
+/* Service Card */
+/* Service Card */
+.user-service-card {
+  width: 358px;
+  height: 176px;
+  border: 1px solid #ededed;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px #0000000a,
+              0px 2px 22.4px 0px #6161610a;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Image side */
+.service-img {
+  width: 150px;
+  height: 152px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Info side */
+.service-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.service-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.service-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #16a34a; /* green */
+  margin-bottom: 8px;
+}
+
+/* Button */
+.schedule-btn {
+  width: 130px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e2e4e9;
+  font-weight: 600;
+  font-size: 14px;
+  color: #e53935;
+  background: #fff;
+}
+
+.user-businessname{
+    font-family: Poppins;
+font-weight: 700;
+font-style: Bold;
+font-size: 28px;
+
+color: #24313E;
+}
+.user-businesstagline{
+font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+color: #3A3A3A;
+}
+/* Tabs container */
+/* Tabs container */
+.user-tabs {
+  border-bottom: none;
+  display: flex;
+  justify-content: space-around;   /* space out tabs evenly */
+  background: #f4f5fa;
+  border: 1px solid #c2cde933;
+  border-radius: 10px;
+  padding: 6px 12px;
+  margin: 0;
+}
+
+/* Tab buttons */
+.user-tabs .nav-link {
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #707070;
+
+  font-family: Manrope, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 16px;              /* fixed padding, not flex */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Active tab */
+.user-tabs .nav-link.active {
+  background: #34495e !important;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+.qty-box {
+  background-color: #FF4D4F;
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: #fff;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.play-pause {
+  font-family: Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;       /* keeps text vertically centered */
+  color: #000;
+  display: flex;
+  align-items: center;  /* aligns text with icon */
+}
+

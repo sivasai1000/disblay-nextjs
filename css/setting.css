@@ -1,0 +1,99 @@
+/* apply styles directly to input */
+*{
+    font-family: Manrope;
+}
+
+.custom-switch-style {
+  width: 51px !important;
+  height: 31px !important;
+  border-radius: 100px !important;
+  background-color: #ddd !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+/* active state */
+.custom-switch-style:checked {
+  background-color: #34C759 !important; /* green */
+}
+
+/* optional: make the toggle circle bigger */
+.custom-switch-style::before {
+  width: 25px !important;
+  height: 25px !important;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+.direct-call{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+
+line-height: 19.06px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+
+}
+.upi-text{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 160%;
+letter-spacing: 0px;
+color: #111827;
+
+
+}
+.upi-input{
+width: 454px;
+height: 52px;
+opacity: 1;
+gap: 10px;
+border-radius: 10px;
+border-width: 1px;
+border: 1px solid #E2E4E9;
+
+}
+.pay-text{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+
+line-height: 12px;
+letter-spacing: 0%;
+text-align: center;
+color: #32353A;
+
+}
+/* Add this to your setting.css or component-specific CSS */
+.custom-checkbox {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox:checked {
+  background: linear-gradient(284.69deg, #F62D2D 7.92%, #FF6161 100%);
+  border: none;
+}
+
+.custom-checkbox:checked::after {
+  content: "✔"; /* check mark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+}

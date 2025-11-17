@@ -1,0 +1,19 @@
+.tab-aboutbusiness{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+
+line-height: 160%;
+letter-spacing: 0px;
+color: #111827;
+}
+.tab-aboutbusiness1{
+border: 1px solid #E2E4E9;
+opacity: 1;
+gap: 10px;
+border-radius: 10px;
+border-width: 1px;
+padding: 14px;
+
+}

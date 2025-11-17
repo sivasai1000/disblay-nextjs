@@ -1,0 +1,618 @@
+/* Scope all styles .nside .landing-page */
+.landing-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.landing-page .landing-navbar .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.landing-page .landing-navbar {
+  background: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  border: 0.9px solid #E0E0E0;
+  /* Rounded corners */
+
+  margin: 15px auto;
+  /* Space around navbar */
+  max-width: 95%;
+  height: 70px !important;
+  /* Like your second screenshot */
+}
+
+.landing-page .landing-logo {
+  height: 36px;
+  cursor: pointer;
+}
+
+.landing-page .navbar-nav {
+  display: flex;
+  gap: 24px;
+  /* adds 24px space between nav items */
+}
+
+.landing-page .navbar-nav .nav-link {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14.41px;
+  line-height: 100%;
+  letter-spacing: -3%;
+  text-align: center;
+  color: #505050;
+
+}
+
+
+
+/* Button - Outline Style */
+.landing-page .landing-btn-outlines {
+  border-radius: 25px;
+  font-weight: 600;
+
+  border: none !important;
+  background: transparent;
+  color: #505050;
+  transition: all 0.2s ease;
+}
+
+.landing-page .landing-btn-outlines:hover {
+
+  border-color: none;
+}
+
+/* Button - Dark Style */
+.landing-page .landing-btn-watch {
+  border-radius: 10px;
+  font-weight: 600;
+  background: linear-gradient(80.47deg, #000000 -14.05%, #494747 55.68%, #000000 81.9%);
+  color: #fff;
+  border: none;
+  transition: all 0.2s ease;
+}
+.landing-page .landing-btn-watch:hover{
+  color:#fff !important;
+  border: none;
+}
+
+
+
+
+/* Hero Section */
+.landing-page .landing-hero {
+background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(251.28deg, rgba(85, 165, 255, 0.4) 24.69%, rgba(111, 179, 255, 0.4) 28.1%, rgba(135, 191, 255, 0.4) 34.91%, rgba(163, 206, 255, 0.4) 42.7%, rgba(149, 199, 255, 0.4) 50.49%, rgba(174, 212, 255, 0.4) 59.49%, rgba(181, 216, 255, 0.4) 66.06%, rgba(159, 204, 255, 0.4) 71.41%, rgba(155, 202, 255, 0.4) 74.58%),
+linear-gradient(360deg, rgba(255, 255, 255, 0) 58.17%, #FFFFFF 100%);
+
+  padding: 10px 20px;
+  margin: 15px auto;
+  max-width: 95%;
+  border-radius: 12px;
+
+}
+
+/* Trust Badge */
+.landing-page .landing-trust-badge {
+  background: #fff;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 8px;
+  height: 33px;
+  border: 1px solid #00000033;
+  margin-bottom: 16px;
+
+  color: #00000099;
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -4%;
+  text-align: center;
+
+
+}
+
+.no-wrap {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; 
+}
+
+
+.landing-page .landing-trust-badge .highlight {
+  color: #F62D2D;
+  font-weight: 600;
+}
+
+.landing-page .landing-hero-text {
+  text-align: center !important;
+}
+
+/* Headline */
+.landing-page .landing-hero-text h1 {
+  font-family: outfit;
+  font-size: 70px;
+  font-weight: 600;
+  color: #000000F2;
+
+}
+
+.landing-page .landing-hero-text .instant {
+  color: #ff2d2d;
+}
+
+/* Subtitle & Tagline */
+.landing-page .landing-hero-text .subtitle {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #677079;
+}
+
+.landing-page .landing-hero-text .tagline {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #066C7E;
+}
+
+/* Buttons */
+.landing-page .landing-btn-primary {
+  background: linear-gradient(119.54deg, #0E1C29 -115.33%, #323D68 103.31%);
+
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.landing-page .landing-btn-primary:hover {
+  background: linear-gradient(119.54deg, #0E1C29 -115.33%, #323D68 103.31%);
+  color: #fff;
+}
+
+.landing-page .landing-btn-outline {
+  border-radius: 8px;
+  width: 300px;
+  height: 50px;
+  background: transparent !important;
+  border: 1px solid #34495E !important;
+  font-weight: 600;
+  color: #34495E;
+  transition: all 0.2s ease;
+}
+
+/* Section */
+.getting-started-title {
+ font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 40px;
+
+line-height: 42px;
+letter-spacing: -2%;
+text-align: center;
+
+}
+
+.getting-started-title .highlight {
+ font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 40px;
+leading-trim: NONE;
+line-height: 42px;
+letter-spacing: -2%;
+text-align: center;
+color: #295672;
+}
+
+.getting-card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1.5px solid #E2E4E9;
+  background: #fff;
+  transition: all 0.3s ease;
+  height: 100%;
+  /* so all cards are equal */
+}
+
+
+.getting-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.getting-card-img {
+  width: 140px;
+  max-height: 140px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.getting-card h5 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.getting-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.perfect-sellers-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+
+}
+
+.seller-card {
+  text-align: center;
+  background: transparent;
+  /* no background */
+  border: none;
+  box-shadow: none;
+  /* remove any shadow from the container */
+}
+
+.seller-card-img {
+  width: 100%;
+  border-radius: 16px;
+
+}
+
+.seller-card h5 {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.seller-category {
+ font-family: Plus Jakarta Sans;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+background: linear-gradient(137.18deg, #FF6161 -6.51%, #F62D2D 104.93%);
+  -webkit-background-clip: text;   /* For Chrome/Safari */
+  -webkit-text-fill-color: transparent; /* Makes gradient visible */
+  background-clip: text;           /* For Firefox */
+  color: transparent;
+
+line-height: 124%;
+letter-spacing: -4%;
+text-align: center;
+
+}
+
+.faq-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid #E2E4E9;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 15.2px 0px #0000000A;
+
+}
+
+
+
+.faq-question {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color:#354D64;
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.faq-answer {
+  padding: 0 20px 16px;
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 132%;
+letter-spacing: -1%;
+color: #677079;
+
+}
+
+.faq-icon {
+  font-size: 14px;
+  color: #333;
+
+}
+
+
+.faq-contact {
+  border: 1px solid #e2e4e9;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.faq-contact p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+}
+
+.faq-contact .btn-dark {
+  background: linear-gradient(80.47deg, #000000 -14.05%, #494747 55.68%, #000000 81.9%);
+  border: none;
+  font-weight: 600;
+  padding: 8px 24px;
+  border-radius: 6px;
+}
+
+.footer-logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+.footer-heading {
+  font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: -6%;
+color: #34495E;
+}
+
+.footer-social a {
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social img:hover {
+  opacity: 0.7;
+}
+
+.footer-subscribe {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  background: #f2f2f2; /* light gray background */
+  border-radius: 12px;
+  padding: 4px;
+  width: fit-content; /* shrink to content */
+}
+
+.subscribe-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 16px;
+  font-size: 16px;
+  flex: 1;
+  color: #333;
+}
+
+.subscribe-btn {
+ 
+  height: 36px;
+  background: #2c3e50; /* dark blue */
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+
+
+.footer-watermark h1 {
+  font-family: 'Righteous', cursive;
+  /* make sure to import from Google Fonts */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 300px;
+  line-height: 350px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+
+  /* Gradient text */
+  background: linear-gradient(180deg,
+      rgba(53, 77, 101, 0.27) 0%,
+      rgba(17, 34, 68, 0.03) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.landingpage-headings{
+  font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 70px;
+line-height: 120%;
+letter-spacing: -2%;
+color: #000000F2;
+
+}
+.card-titles{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #262626;
+
+}
+.card-titlestext{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: center;
+color: #6C7783;
+}
+.refunds-name{
+   font-family: Manrope;
+font-weight: 700;
+font-style: Medium;
+font-size: 16px;
+line-height: 16px;
+letter-spacing: 0%;
+
+color: #6C7783;
+}
+.perfect-sellerstext{
+  font-family: Plus Jakarta Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px;
+line-height: 124%;
+letter-spacing: -4%;
+text-align: center;
+color: #000000;
+}
+.frequent-ques{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 120%;
+letter-spacing: 6%;
+text-align: center;
+color: #0000008A;
+
+}
+.find-acc{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #34495E;
+
+}
+.footer-text{
+  font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: -6%;
+color: #00000099;
+}
+.terms-container {
+  background: #fff;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.terms-title {
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+line-height: 20px;
+letter-spacing: 0px;
+text-align: center;
+color: #323232;
+}
+
+.terms-heading {
+ font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 36px;
+
+line-height: 40px;
+letter-spacing: 0px;
+text-align: center;
+color: #000000;
+
+}
+
+.terms-updated {
+ font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 20px;
+letter-spacing: 0px;
+text-align: center;
+color: #323232;
+}
+
+.terms-section {
+  margin-bottom: 32px;
+}
+
+.terms-subheading {
+  font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: 0px;
+color: #262626;
+}
+
+.terms-section p,
+.terms-section ul {
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+line-height: 24px;
+letter-spacing: 0px;
+color: #0000008F;
+}
+
+.terms-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+.terms-body-section {
+  max-width: 1024px;   /* keeps the text narrow like in the screenshot */
+  margin: 0 auto;     /* centers it inside the container */
+  padding: 0 20px;    /* some breathing space for smaller screens */
+}

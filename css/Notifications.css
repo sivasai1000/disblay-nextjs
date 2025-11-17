@@ -1,0 +1,302 @@
+
+
+  /* Container styles */
+.notification-panel {
+  width: 100% !important;
+  margin: auto;
+
+  overflow-y: auto;
+  border: none;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 12px;
+  border: none;
+}
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0 10px;
+  color: #34495E;
+}
+
+.notification-card {
+  width: 100%;
+  height: 100%;
+  background: #F2F4F7;
+  border-radius: 12px;
+ 
+  margin-bottom: 16px;
+  padding: 12px;
+ 
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+}
+.notification-cards {
+  width: 100%;
+  margin-top: 20px;
+  height: 100%;
+  background: #Fff;
+  border-radius: 12px;
+ 
+  margin-bottom: 16px;
+  box-shadow: 0px 2px 10px 0px #0000000D;
+
+  padding: 12px;
+ 
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.combo-img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.notification-cards:hover {
+  transform: translateY(-2px);
+}
+
+.notification-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notification-logo {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #34495E;
+}
+
+.notification-sub {
+  font-size: 13px;
+  color: #6A7576;
+}
+.badge-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #f73838; /* red */
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 8px; /* adjust spacing */
+}
+
+.badge-circle {
+  background-color: #F62D2D;
+  color: white;
+  padding: 10px; /* Equal padding for width and height */
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Set a fixed width */
+  height: 30px; /* Set a fixed height to make it perfectly round */
+  text-align: center;
+}
+
+
+
+.alignings{
+  top: 0px !important;
+  padding: 22px;
+  color: white;
+  background-color: rgba(52, 73, 94, 1);
+}
+
+/* Notification card styles */
+.notification-box {
+  
+  border-radius: 12px;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+/* Add a horizontal scroll container */
+.notification-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  gap: 1rem;
+}
+.notification-scroll-wrapper {
+  flex-wrap: wrap;
+  
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.notification-box {
+  flex: 0 0 80%; /* Width of each card */
+  scroll-snap-align: start;
+  min-width: 250px;
+  max-width: 100%;
+}
+
+/* Hover animation */
+.notification-box:hover {
+  transform: translateY(-2px);
+}
+.color-0 {
+  width: 100% !important;
+  gap: 2rem !important;
+  background-color: rgba(116, 186, 255, 1); /* Light Blue */
+}
+.color-1 {
+  background-color: rgba(116, 186, 255, 1); /* Light Green */
+}
+.color-2 {
+  background-color: rgba(116, 186, 255, 1); /* Light Yellow */
+}
+.color-3 {
+  background-color: rgba(116, 186, 255, 1); /* Light Pink */
+}
+.color-4 {
+  background-color: rgba(116, 186, 255, 1); /* Light Pink */
+}
+
+/* Unread notifications override */
+.unread-card {
+  background-color: #a4d4ff; /* brighter blue for unread */
+}
+
+.notification-box .badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  min-width: 22px;
+}
+
+/* Remove borders for cards */
+.cardshow {
+  border: none;
+  margin-top: 0px !important;
+  padding: 0px !important;
+}
+.user-notification-box{
+
+height: 80px;
+}
+.notifyname{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #34495E;
+}
+.notifyrequest{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #34495E;
+
+}
+.notifycombo{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #34495E;
+
+}
+.notifypackagename{
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 11px;
+  color: #34495E;
+}
+.notifycreated{
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #34495E;
+}
+.userdetailsalign{
+  margin-top: 100px;
+  margin-left: 20px;
+  
+}
+.notifyall{
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #34495E;
+}
+.notifyadd{
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #34495E;
+}
+.full-screen-panel {
+  background-color: white !important;
+  padding-bottom: 100px; /* Prevent overlap with footer */
+}
+
+
+
+.combo-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.combo-img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.combo-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #262626;
+  font-family: "Manrope";
+}
+
+.combo-sub {
+  font-size: 13px;
+  color: #6a7576;
+  font-family: "Manrope";
+  margin-top: 2px;
+}
+
+.combo-badge {
+  background-color: #F62D2D;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  min-width: 32px;
+  text-align: center;
+}

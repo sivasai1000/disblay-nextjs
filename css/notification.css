@@ -1,0 +1,184 @@
+.notification-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  background: #F2F4F7;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+.notification-card:hover {
+  background: #F2F4F7;
+}
+.notification-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.notification-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.notification-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.notification-sub {
+  font-size: 13px;
+  color: #6b7280;
+}
+.badge-circle {
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f73838;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.full-screen-panel {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.customer-section {
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.customer-section p {
+  margin: 6px 0;
+}
+.notifyname {
+  font-family: Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #262626;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* force max width ~30 characters */
+  max-width: 30ch;
+  display: inline-block;
+}
+.notifyqty{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #34495E;
+}
+.notityprice{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 19.2px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #07182C;
+}
+.notifysub{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #3E5069;
+}
+.nnotifyprofile{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+}
+.nnotifyprofile1{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+}
+.nnotifyprofile2{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 26px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+}
+.whatsappbtn{
+ 
+height: 50;
+angle: 0 deg;
+opacity: 1;
+gap: 8px;
+border-radius: 10px;
+border-width: 1px;
+background: #0BCB61;
+
+}
+.comboname{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #34495E;
+}
+.combodate{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #444444;
+}
+.nrequest{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #34495E;
+}
+

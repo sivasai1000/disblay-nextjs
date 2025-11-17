@@ -1,0 +1,377 @@
+/* Container for the search */
+.header-search {
+  width: 326px;
+}
+
+/* The input group styled as the real box */
+.search-box {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #00000029; /* subtle gray */
+  overflow: hidden; /* keeps corners rounded */
+}
+
+/* Input inside */
+.search-input {
+  font-size: 14px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Left icon */
+.search-box .input-group-text {
+  background: transparent !important;
+  border: none !important;
+  padding-left: 12px;
+  padding-right: 8px;
+}
+
+.cart-btn {
+    width: 110px;
+  height: 54px;
+  border-radius: 10px !important;
+ 
+}
+.cart-count {
+ font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #FFFFFF;
+
+}
+
+.login-text {
+ font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #363636;
+}
+
+/* Menu */
+.menu-btn img {
+  display: block;
+
+}
+
+/* Spacing: ensure 20px between each element */
+.header-right > *:not(:last-child) {
+  margin-right: 50px !important;
+}
+.usermenu-card{
+  top: 87px;
+  right: 100px;
+  width: 328px;
+height: 392px;
+
+opacity: 1;
+background: #fff;
+gap: 8px;
+border-radius: 16px;
+border-width: 1px;
+
+
+
+}
+.usertop-owner{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+}
+.usermenu-item{
+  width: 300px;
+height: 60px;
+opacity: 1;
+gap: 12px;
+border-radius: 10px;
+padding: 8px;
+
+}
+.modal-owner{
+font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: -1.1%;
+vertical-align: bottom;
+color: #0A0D14;
+
+}
+.owner-modal {
+  max-width: 780px !important;
+  width: 100%;
+}
+
+.owner-modal .modal-content {
+  height: 426px;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-namedetails{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 130%;
+letter-spacing: 0px;
+color: #111827;
+
+}
+.user-inputdetails{
+height: 54px;
+opacity: 1;
+gap: 10px;
+background: #fff !important ;
+border-radius: 10px;
+border-width: 1px;
+padding: 14px;
+border: 1px solid #E2E4E9
+
+}
+.modal-upitext{
+font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 15px;
+line-height: 12px;
+letter-spacing: 0px;
+color: #262626;
+
+}
+.user-notepay{
+  font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 15px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #000000;
+
+}
+.user-notetextpay{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Bold;
+font-size: 14px;
+line-height: 28px;
+letter-spacing: 0%;
+color: #626262;
+}
+.login-mobile{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 130%;
+letter-spacing: 0px;
+color: #111827;
+}
+.login-head{
+  font-family: Poppins;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 19.06px;
+letter-spacing: 0%;
+vertical-align: bottom;
+color: #0A0D14;
+}
+.login-continuebtn{
+height: 56px;
+opacity: 1;
+border-radius: 10px;
+gap: 8px;
+border-width: 1px;
+background: #34495E;
+
+}
+.login-continuetext{
+  font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px;
+line-height: 20px;
+letter-spacing: 0px;
+color: #FFFFFF;
+
+
+}
+.success-update{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 22px;
+line-height: 26px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: #262626;
+
+}
+.success-update1{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: #545454;
+
+}
+.success-whatsapp{
+  width: 170px;
+height: 54px;
+opacity: 1;
+border-radius: 10px;
+gap: 8px;
+background: #0BCB61;
+
+}
+.success-whatsapptext{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 26px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.userprofiledetails-name{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 130%;
+letter-spacing: 0px;
+color: #111827;
+
+}
+.userprofiledetails-input{
+height: 54px;
+opacity: 1;
+gap: 10px;
+border-radius: 10px;
+border-width: 1px;
+padding: 14px;
+border: 1px solid #E2E4E9;
+
+}
+.userprofiledetails-edit{
+height: 60px;
+opacity: 1;
+gap: 8px;
+border-radius: 10px;
+background: #34495E;
+border: none;
+
+}
+.userprofiledetails-edittext{
+  font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px;
+line-height: 20px;
+letter-spacing: 0px;
+color: #FFFFFF;
+
+}
+.userprofiledetails-edit1{
+height: 60px;
+opacity: 1;
+gap: 8px;
+border-radius: 10px;
+background: #41BD90;
+border: none;
+
+}
+.view-business{
+  font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 24px;
+line-height: 26px;
+letter-spacing: 0px;
+text-align: center;
+color: #272D3D;
+}
+.view-businesstext{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0px;
+text-align: center;
+color: #767676;
+}
+.viewbusiness-btn{
+  width: 326px;
+height: 56px;
+background: linear-gradient(280.09deg, #F62D2D 64.38%, #FF6161 75.43%, #FF6161 86.46%);
+border: none;
+border-radius: 12px;
+opacity: 1;
+
+}
+.viewbusiness-textbtn{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: center;
+color: #FFFFFF
+}
+.userdetails-name{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0px;
+color: #262626;
+}
+.userdetails-nametext{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #767676
+}
+.userdetails-name1{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color:#EC0606;
+}

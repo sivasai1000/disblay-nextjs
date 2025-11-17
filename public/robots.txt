@@ -1,0 +1,58 @@
+User-agent: *
+Allow: /
+
+# Block admin, internal, backend
+Disallow: /admin/
+Disallow: /othersadmin/
+Disallow: /master/
+Disallow: /othersmaster/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+
+# Block login/auth pages
+Disallow: /login
+Disallow: /credtionals
+Disallow: /welcome
+Disallow: /otherslogin
+Disallow: /enrollbusiness
+
+# Block account settings & support pages
+Disallow: /setting
+Disallow: /otherssetting
+Disallow: /help
+Disallow: /othershelp
+Disallow: /support
+Disallow: /otherssupport
+Disallow: /mysubscription
+Disallow: /profile
+Disallow: /othersprofile
+
+# Block payment / order pages
+Disallow: /success
+Disallow: /ordersuccess
+Disallow: /otherssuccess
+Disallow: /combo-payment
+Disallow: /otherscombo-payment
+
+# Block business management pages
+Disallow: /businessorders
+Disallow: /businesssaddress
+Disallow: /businessneworders
+Disallow: /address
+Disallow: /businesshelp
+Disallow: /businessbillhistory
+Disallow: /billhistory
+
+# Block others screens
+Disallow: /othersplanselector
+Disallow: /otherscombodetail
+Disallow: /othersnotification
+Disallow: /othersbillhistory
+
+# Enroll & utility pages
+Disallow: /getenroll
+Disallow: /getenrollid
+
+# Sitemap
+Sitemap: https://disblay.com/sitemap.xml

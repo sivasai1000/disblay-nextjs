@@ -1,0 +1,331 @@
+.detail-comboid{
+font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: -1.5%;
+vertical-align: bottom;
+color: var(--text-main-900, #0A0D14);
+
+}
+.detail-packagename{
+    font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+}
+.detail-ncat{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 15px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #3A3A3A;
+
+}
+.detail-ncatvalue{
+    font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 16px;
+line-height: 19.2px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #066C7E;
+}
+.btn-insidetext{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 15.52px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: #FFFFFF;
+}
+.details-cattitle{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 12px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #6B7280;
+}
+.details-catname{
+font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #111827;
+}
+.details-catnames{
+font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #111827;
+}
+.productsheader{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 14px;
+line-height: 15.52px;
+letter-spacing: 0%;
+color: #405979;
+}
+.productsvalue{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 15.52px;
+letter-spacing: 0%;
+color: #000000;
+}
+.editnew{
+    border: none;
+    background: transparent;
+}
+.comboid{
+    font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+color: var(--text-main-900, #0A0D14);
+
+line-height: 24px;
+letter-spacing: -1.5%;
+vertical-align: bottom;
+
+}
+.comboname{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 15px;
+line-height: 20px;
+letter-spacing: -0.6%;
+vertical-align: middle;
+color: var(--text-main-900, #0A0D14);
+
+}
+.comboinput{
+    width: 551px;
+height: 48px;
+opacity: 1;
+border-radius: 9px;
+background: var(--bg-white-0, #FFFFFF);
+
+border-width: 1px;
+border: 1px solid var(--stroke-soft-200, #E2E4E9);
+gap: 8px;
+
+}
+.cathead{
+    font-family: Poppins;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 19.06px;
+letter-spacing: 0%;
+vertical-align: bottom;
+color: #0A0D14;
+}
+.catname{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 15px;
+line-height: 20px;
+letter-spacing: -0.6%;
+vertical-align: middle;
+color: var(--text-main-900, #0A0D14);
+
+}
+.catinput{
+height: 48px;
+opacity: 1;
+border-radius: 9px;
+border-width: 1px;
+
+gap: 8px;
+background: var(--bg-white-0, #FFFFFF);
+border: 1px solid var(--stroke-soft-200, #E2E4E9)
+
+}
+.custom-modal{
+    border-radius: 12px;
+}
+.cancel-btn1{
+    width: 250.5px;
+height: 52px;
+
+opacity: 1;
+border-radius: 10px;
+border-width: 1px;
+gap: 4px;
+border: 1px solid #E2E4E9;
+font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 14px;
+text-align: center;
+background: #FFFFFF;
+color: #525866;
+
+
+}
+.create-btn1{
+     width: 250.5px;
+height: 52px;
+
+opacity: 1;
+border-radius: 10px;
+border-width: 1px;
+gap: 4px;
+background: #34495E;
+color: #fff;
+font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+border: none;
+
+text-align: center;
+
+}
+.selecttype{
+    font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+color: #0A0D14;
+line-height: 20px;
+letter-spacing: -0.6%;
+vertical-align: middle;
+
+}
+.selecttypenote{
+    font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #000000;
+}
+.selectypenotetext{
+    font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #626262;
+
+}
+.masterstype{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: -1%;
+vertical-align: middle;
+color: #6F758B;
+
+}
+.right-plan{
+    font-family: Metal;
+font-weight: 400;
+font-style: Regular;
+font-size: 40px;
+
+line-height: 127%;
+letter-spacing: -5%;
+text-align: center;
+color: #000000;
+}
+.plan-duration{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -1.5%;
+vertical-align: bottom;
+color: #02060CB2;
+}
+.plan-amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 51.06px;
+  line-height: 100%;
+  letter-spacing: 0;
+
+  background: linear-gradient(135.68deg, #FF6161 -6.5%, #F62D2D 114.65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.list-itemplan {
+  display: flex;
+  align-items: flex-start; /* tick stays at the top */
+  gap: 8px; /* spacing between tick and text */
+  font-family: Manrope;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #02060CD9;
+}
+
+.tick-icon {
+    margin-top: 5px;
+  flex-shrink: 0;  /* prevent tick from resizing */
+  color: #00B67A;
+  stroke-width: 3;
+  width: 18px;
+  height: 18px;
+}
+
+.list-text {
+  flex: 1;
+}
+.important-noteplan{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #262626;
+
+}
+.import-noteitems{
+    font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #0000008A;
+
+}
+.details-card {
+  width: 100% !important;
+}

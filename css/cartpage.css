@@ -1,0 +1,371 @@
+/* ===== CartPage Layout ===== */
+.user-home {
+  background-color: #f8f9fc; /* light background like screenshot */
+  min-height: 100vh;
+}
+
+/* ===== Cards (Cart, Billing, Action) ===== */
+.bg-white {
+  background: #fff;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+.p-3 {
+  padding: 1.25rem !important;
+}
+
+/* ===== Cart Items ===== */
+.qty-box {
+  background-color: #ff4d4f;
+  border-radius: 8px;
+  padding: 4px 10px;
+  color: #fff;
+  min-width: 80px;
+}
+
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  opacity: 0.8;
+}
+
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ===== Buttons ===== */
+.btn-success {
+  background-color: #0a9b4f !important;
+  border-color: #0a9b4f !important;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.btn-success:hover {
+  background-color: #088d47 !important;
+}
+
+.btn-dark {
+  background-color: #2c3e50 !important;
+  border: none;
+  font-weight: 600;
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+
+.btn-dark:hover {
+  background-color: #1e2b38 !important;
+}
+
+/* ===== Register Card ===== */
+.register-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: #fff;
+}
+
+/* ===== Note Section ===== */
+.note-section {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.note-section strong {
+  font-size: 14px;
+  color: #111827;
+}
+.order-btn{
+width: 220px;
+height: 56px;
+opacity: 1;
+border-radius: 10px;
+gap: 8px;
+background: #34495E;
+border: none;
+
+}
+.order-btntext{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px;
+line-height: 19.06px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #FFFFFF;
+}
+.cart-headtext{
+font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -1.5%;
+vertical-align: bottom;
+color: var(--text-main-900, #0A0D14);
+
+}
+.cart-itemscard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #E2E9FB;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* Fix alignment for right side (qty + price) */
+.cart-item-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  min-width: 200px; /* ensures straight alignment */
+}
+
+.cart-pricetext {
+  min-width: 80px;  /* keeps all prices aligned */
+  text-align: right;
+}
+
+.cart-itemname{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+
+
+}
+.cart-itemdesc{
+font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #3A3A3A;
+
+}
+.cart-qnty{
+font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 20px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #363636;
+
+}
+.order-btn:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  border: none;
+}
+.cart-pricetext{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 16px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #363636;
+
+}
+.cart-notetext{
+    font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 15px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #000000;
+
+}
+.cart-notedesc{
+    font-family: Manrope;
+font-weight: 500;
+font-style: Bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0%;
+color: #626262;
+}
+.cart-billing{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #363636;
+
+}
+.cart-subtotal{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: #717171;
+}
+.cart-subtotalprice{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 19.2px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: #262626;
+
+}
+.cart-deliveryvalue{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 14px;
+line-height: 19.2px;
+letter-spacing: 0%;
+text-align: right;
+vertical-align: middle;
+color: #717171;
+}
+.cart-total{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+
+line-height: 19.2px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #000000;
+
+}
+.cart-totalprice{
+    font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 24px;
+line-height: 19.2px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #27A64B;
+
+}
+.cart-btnremove{
+   font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:  #FF6161 ;
+ 
+}
+.text-continueregister{
+    font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #363636;
+}
+.cart-address{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #262626;
+
+}
+.cart-addresstext{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 160%;
+letter-spacing: 0px;
+vertical-align: middle;
+color: #525866;
+}
+.cart-btnaddresstext{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+color: linear-gradient(137.18deg, #FF6161 -6.51%, #F62D2D 104.93%);
+
+
+}
+.cart-btnaddress{
+height: 46px;
+border: 1px solid;
+
+border-image-source: linear-gradient(137.18deg, #FF6161 -6.51%, #F62D2D 104.93%);
+
+
+}
+.address-detailsname{
+  font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 22px;
+line-height: 19.06px;
+letter-spacing: 0%;
+vertical-align: bottom;
+color: #0A0D14;
+}
+.label-names{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 160%;
+letter-spacing: 0px;
+color: #111827;
+}

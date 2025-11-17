@@ -1,0 +1,107 @@
+.details-name{
+font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 28px;
+line-height: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #262626;
+
+}
+.details-back{
+   font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 28px;
+line-height: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #000;
+
+} 
+
+.details-brand{
+    font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #3A3A3A;
+}
+.details-quant{
+    font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #3A3A3A;
+}
+.details-price{
+    font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 36px;
+line-height: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #1A7F37;
+
+}
+.details-addbtn{
+width: 164px;
+height: 52px;
+opacity: 1;
+gap: 4px;
+border-radius: 8px;
+background: linear-gradient(137.18deg, #FF6161 -6.51%, #F62D2D 104.93%);
+
+
+}
+.details-addtext{
+    font-family: Manrope;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 20px;
+line-height: 15.52px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:  #FFFFFF;
+
+
+}
+.details-listid{
+font-family: Poppins;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 19.06px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:  #34495E;
+
+}
+.details-description{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #34495E;
+}
+.details-descriptiontext{
+    font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #808080;
+justify-content: center;
+}

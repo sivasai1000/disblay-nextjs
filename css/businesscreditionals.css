@@ -1,0 +1,252 @@
+.auth-container {
+  min-height: 100vh;       /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  padding: 0;              /* Remove extra padding */
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 1400px;       /* Limit max width on big monitors */
+  height: 100vh;           /* ✅ Fill full viewport height */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Equal halves */
+  border-radius: 0;        /* Remove border radius for edge-to-edge look */
+  
+  background: #fff;
+  box-shadow: 0 0 0 rgba(0,0,0,0); /* No shadow since it's full screen */
+}
+
+/* Left side */
+.left-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/* Right side */
+.right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background: #fff;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 992px) {
+  .auth-card {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .left-image {
+    height: 300px; /* Smaller fixed height on mobile */
+  }
+}
+.creditionals-header{
+  font-family: Manrope;
+font-weight: 600;
+font-style: Semibold;
+font-size: 36px;
+line-height: 100%;
+letter-spacing: 1%;
+text-align: center;
+vertical-align: middle;
+color: #34495E;
+
+}
+.creditionals-text{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 12px;
+letter-spacing: 0px;
+color: #0C1421;
+
+}
+.creditionals-input{
+height: 52px;
+width: 320px;
+opacity: 1;
+gap: 10px;
+border-radius: 10px;
+border-width: 1px;
+padding: 8px;
+border: 1px solid #E2E4E9;
+background: #FFFFFF;
+
+}
+.creditionals-agree{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+
+color:var(--text-main-900, #0A0D14);
+;
+
+}
+.creditionals-terms{
+  color: #3B82F6;
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 12px;
+line-height: 10.3px;
+letter-spacing: -0.6%;
+
+}
+.creditional-accountcreate{
+height: 54px;
+opacity: 1;
+gap: 8px;
+border-radius: 12px;
+border-width: 1px;
+background: #34495E;
+
+
+}
+.creditionals-btntext{
+  font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px;
+line-height: 20px;
+letter-spacing: 0px;
+color: #FFFFFF;
+
+}
+.creditonals-already{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0px;
+text-align: center;
+color: #424242;
+}
+.creditionals-otptext{
+  font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #5E5E5E;
+}
+.creditionals-otptext1{
+font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+
+}
+.creditionals-mpin{
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+color: #34495E;
+
+}
+.creditionals-input.is-valid {
+  border: 1.5px solid #28a745; /* green border */
+}
+
+.creditionals-input.is-invalid {
+  border: 1.5px solid #dc3545; /* red border */
+}
+/* Suggestion styling */
+.suggestion-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1.5px solid #E2E4E9;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.suggestion-option:hover {
+  background: #f9fafb;
+}
+.creditonals-already1{
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px;
+line-height: 32px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #2C2C2C;
+}
+.globe-input{
+height: 54px;
+opacity: 1;
+gap: 8px;
+border-radius: 10px;
+border-width: 1px;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 8px;
+border-style: dashed;
+background: #02A37E1A;
+border: 1px solid #27A376;
+
+}
+.business_url{
+  font-family: Poppins;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 5.46px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #27A376;
+text-decoration: none;
+
+}
+.complete-btn{
+  width: 350px;
+height: 55px;
+opacity: 1;
+gap: 8px;
+border-radius: 11px;
+background: #27A376;
+border: none;
+
+}
+.progress {
+  background: #27A37633;
+  overflow: hidden;
+  height: 14px;
+
+
+border-top-left-radius: 14px;
+border-bottom-left-radius: 14px;
+}
+
+.progress-bar {
+  transition: width 0.4s ease;
+  
+
+}
