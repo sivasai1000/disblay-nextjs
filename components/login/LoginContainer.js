@@ -12,20 +12,19 @@ import {
   useResetMpin,
 } from "@/components/BusinessApi/page";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter} from "next/navigation";
 import LoginContent from "./LoginContent";
 import ForgotContent from "./ForgotContent";
 
 export default function LoginContainer() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-
+  
   const signupMobile =
     typeof window !== "undefined"
       ? sessionStorage.getItem("signupMobile")
       : "";
 
-  const initialUsername = signupMobile || searchParams.get("username") || "";
+  const initialUsername = signupMobile  || "";
   const creditionalsimg = "/assets/img/creditionals.png";
 
   const [username, setUsername] = useState(initialUsername);
