@@ -1,5 +1,6 @@
 "use client";
 
+
 import React from "react";
 import { useRouter} from "next/navigation";
 import LeftNav from "@/components/LeftNav";
@@ -13,9 +14,6 @@ import Link from "next/link";
 
 export default function Success() {
   const router = useRouter();
-
-
- 
   const getSessionState = () => {
   if (typeof window === "undefined") return {};
 
