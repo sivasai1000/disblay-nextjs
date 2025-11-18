@@ -3,6 +3,7 @@
 import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import LeftNav from "@/components/LeftNav";
+import "@/css/businesscreditionals.css"
 import TopNav from "@/components/TopNav";
 import "@/css/success.css";
 import {
@@ -18,16 +19,23 @@ export default function Success() {
   const shareLinkParam = searchParams.get("shareLink");
   const durationParam = searchParams.get("durationDays");
 
-  // Fallback: sessionStorage (if you want to store state before redirect)
+ 
   const getSessionState = () => {
-    if (typeof window === "undefined") return {};
-    try {
-      const raw = sessionStorage.getItem("success_state");
-      return raw ? JSON.parse(raw) : {};
-    } catch {
-      return {};
-    }
-  };
+  if (typeof window === "undefined") return {};
+
+  try {
+    return {
+      shareLink: sessionStorage.getItem("shareLink") || "",
+      durationDays: sessionStorage.getItem("durationDays") || "",
+      planAmount: sessionStorage.getItem("planAmount") || "",
+      planId: sessionStorage.getItem("planId") || "",
+      plan_for: sessionStorage.getItem("plan_for") || ""
+    };
+  } catch {
+    return {};
+  }
+};
+
 
   const sessionState = getSessionState();
 
@@ -145,7 +153,7 @@ export default function Success() {
             </div>
 
             <button
-              className="mt-4"
+              className="mt-4 mb-4"
               style={{
                 border: "1px solid red",
                 borderRadius: "8px",
@@ -162,15 +170,18 @@ export default function Success() {
               Share <img src={redshare} alt="share" />
             </button>
 
-            <div className="mt-4">
-              <button
-                className="creditional-accountcreate mt-4"
-                style={{ width: "200px" }}
-                onClick={() => router.push("/Admin")}
-              >
-                <span className="creditionals-btntext">Home</span>
-              </button>
-            </div>
+  <div className="mt-4 d-flex justify-content-center">
+  <Link
+    href="/Admin"
+    className="creditional-accountcreate d-flex justify-content-center align-items-center"
+    style={{ width: "200px", textDecoration: "none" }}
+  >
+    <span className="creditionals-btntext">Home</span>
+  </Link>
+</div>
+
+
+
           </div>
 
           {/* Notes Section */}

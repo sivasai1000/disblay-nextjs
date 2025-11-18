@@ -2943,7 +2943,7 @@ router.push("/othersplanselector");
                 padding: "10px 16px",
                 fontSize:"20px",
                 fontWeight:"600",
-                fontFamily:"poppins"
+                fontFamily:"Manrope"
               }}
             >
               Continue
@@ -3065,7 +3065,7 @@ router.push("/othersplanselector");
   >
     <div
       style={{
-    fontFamily: "Poppins",
+    fontFamily: "Manrope",
     fontSize: "24px",
     fontWeight: "600",
     margin: 0,

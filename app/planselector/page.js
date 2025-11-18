@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useRouter } from "next/navigation";
 import TopNav from "@/components/TopNav";
+import "@/css/combodetails.css"
 import { usePlanDetails } from "@/components/BusinessApi/page";
 import { Check } from "lucide-react";
 

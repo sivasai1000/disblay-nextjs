@@ -137,18 +137,28 @@ export default function MySubscription() {
                   <div className="mt-2">
                     <button
                       onClick={() => {
-                        // Save renewal info (if needed)
-                        sessionStorage.setItem(
-                          "businessRenewData",
-                          JSON.stringify({
-                            type: "Renewal",
-                            plan_for: "business",
-                            businessId,
-                          })
-                        );
 
-                        router.push("/planselector");
-                      }}
+  // Main combined object (optional)
+  sessionStorage.setItem(
+    "planSelectorState",
+    JSON.stringify({
+      type: "Renewal",
+      plan_for: "business",
+      businessId: String(businessId || "")
+    })
+  );
+
+  // Individual session keys (same style you asked for)
+  sessionStorage.setItem("type", "Renewal");
+  sessionStorage.setItem("plan_for", "business");
+  sessionStorage.setItem("businessId", String(businessId || ""));
+
+  
+
+  // Navigate
+  router.push("/planselector");
+}}
+
                       style={{
                         background: "#27A64B",
                         border: "none",

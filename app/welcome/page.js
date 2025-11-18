@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import "@/css/businesscreditionals.css";
+import "@/css/welcome.css";
 import axios from "axios";
+
 
 const globe = "/assets/img/globe.svg";
 const disblay = "/assets/img/disblay.svg";
@@ -145,192 +146,175 @@ export default function Welcome() {
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-card row">
-        
-        {/* Left Side */}
-        <div className="col-6 d-flex justify-content-center align-items-center p-3 left-image">
-          <img
-            src={creditionalsimg}
-            alt="credentials"
-            style={{ height: "95dvh", objectFit: "contain" }}
-          />
-        </div>
+  <div className="auth-container">
+    <div className="auth-card">
 
-        {/* Right Side */}
-        <div className="col-6 right-panel">
-          <div className="form-wrapper text-center">
+      {/* LEFT SIDE */}
+      <div className="left-image" style={{ position: "relative" }}>
+        <img
+          src={creditionalsimg}
+          alt="credentials"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
+        />
+      </div>
 
-            {/* ---------------------------- WELCOME STEP ---------------------------- */}
-            {step === "welcome" && (
-              <>
-                <img src={disblay} alt="disblay" width={120} height={35} className="mb-4" />
+      {/* RIGHT SIDE */}
+      <div className="right-panel">
+        <div className="form-wrapper text-center">
 
-                <div className="creditionals-header mb-3">
-                  Welcome to Disblay!
-                </div>
+          {/* ---------------- WELCOME STEP ---------------- */}
+          {step === "welcome" && (
+            <>
+              <img src={disblay} alt="disblay" width={120} height={35} className="mb-4" />
 
-                <ul className="text-start small mb-4">
-                  <li>We’re glad you’re here.</li>
-                  <li>First check if your business name is available.</li>
-                  <li>Then fill your details to create a stunning menu.</li>
-                  <li>Let’s build something amazing!</li>
-                </ul>
+              <div className="creditionals-header mb-3">Welcome to Disblay!</div>
 
-                <button
-                  className="creditional-accountcreate w-100 mb-4 mt-4"
-                  onClick={() => setStep("setup")}
-                >
-                  <span className="creditionals-btntext">
-                    Let’s get started 🚀
-                  </span>
-                </button>
-              </>
-            )}
+              <ul className="text-start small mb-4">
+                <li>We’re glad you’re here.</li>
+                <li>First check if your business name is available.</li>
+                <li>Then fill your details to create a stunning menu.</li>
+                <li>Let’s build something amazing!</li>
+              </ul>
 
-            {/* ---------------------------- SETUP STEP ---------------------------- */}
-            {step === "setup" && (
-              <div className="text-start">
-                <div className="creditionals-header mb-4">
-                  Set up your Business
-                </div>
+              <button
+                className="creditional-accountcreate w-100 mb-4 mt-4"
+                onClick={() => setStep("setup")}
+              >
+                <span className="creditionals-btntext">
+                  Let’s get started 🚀
+                </span>
+              </button>
+            </>
+          )}
 
-                <label className="form-label creditionals-text mb-3 mt-4">
-                  Business Webpage Address
-                </label>
+          {/* ---------------- SETUP STEP ---------------- */}
+          {step === "setup" && (
+            <div className="text-start">
+              <div className="creditionals-header mb-4">Set up your Business</div>
 
-                <input
-                  type="text"
-                  value={businessName}
-                  onChange={handleBusinessChange}
-                  placeholder="Enter your business name"
-                  className={`creditionals-input w-100 mb-2 ${
-                    isAvailable === false
-                      ? "is-invalid"
-                      : isAvailable === true
-                      ? "is-valid"
-                      : ""
-                  }`}
-                />
+              <label className="form-label creditionals-text mb-3 mt-4">
+                Business Webpage Address
+              </label>
 
-                {/[^a-zA-Z0-9 ]/.test(businessName) && (
-                  <p className="mt-2" style={{ color: "darkred" }}>
-                    ❌ Avoid using special characters.
-                  </p>
-                )}
+              <input
+                type="text"
+                value={businessName}
+                onChange={handleBusinessChange}
+                placeholder="Enter your business name"
+                className={`creditionals-input w-100 mb-2 ${
+                  isAvailable === false
+                    ? "is-invalid"
+                    : isAvailable === true
+                    ? "is-valid"
+                    : ""
+                }`}
+              />
 
-                {isAvailable === true && businessName && (
-                  <p className="mt-2" style={{ color: "green" }}>
-                    ✅ Business name available
-                  </p>
-                )}
-                {isAvailable === false && (
-                  <p className="mt-2" style={{ color: "darkred" }}>
-                    ⚠️ Business name not available
-                  </p>
-                )}
-
-                {/* Suggestions */}
-                {isAvailable === false && suggestions.length > 0 && (
-                  <>
-                    <div className="mt-3 mb-2 creditionals-text fw-semibold">
-                      Suggestions
-                    </div>
-
-                    {suggestions.map((sug, idx) => (
-                      <div className="form-check mb-2" key={idx}>
-                        <input
-                          type="radio"
-                          className="form-check-input"
-                          name="sug"
-                          id={`sug-${idx}`}
-                          onClick={() => {
-                            setBusinessName(sug);
-                            setIsAvailable(true);
-                            setSuggestions([]);
-                          }}
-                        />
-                        <label
-                          className="form-check-label ms-2 creditionals-text"
-                          htmlFor={`sug-${idx}`}
-                        >
-                          {sug}
-                        </label>
-                      </div>
-                    ))}
-                  </>
-                )}
-
-                {/* Tagline */}
-                <label className="form-label creditionals-text mb-2 mt-4">
-                  Tagline (Optional)
-                </label>
-
-                <input
-                  type="text"
-                  value={tagline}
-                  onChange={(e) => setTagline(e.target.value)}
-                  placeholder="Enter your tagline"
-                  className="creditionals-input w-100 mt-2 mb-4"
-                />
-
-                <button
-                  className="creditional-accountcreate w-100 mb-4 mt-4"
-                  onClick={handleProceed}
-                  disabled={!isAvailable}
-                >
-                  <span className="creditionals-btntext">Proceed</span>
-                </button>
-
-                <div className="note-text mt-3">
-                  <b>Note:</b> Avoid special characters & * ? / _.  
-                  Example: **HotelVetrivel → www.disblay.com/hotelvetrivel**
-                </div>
-              </div>
-            )}
-
-            {/* ---------------------------- SUCCESS STEP ---------------------------- */}
-            {step === "success" && (
-              <div className="text-center">
-                <div className="creditionals-header" style={{ marginBottom: "50px" }}>
-                  Congratulations!
-                </div>
-
-                <img
-                  src={celebration}
-                  alt="celebration"
-                  style={{ width: "150px", height: "150px" }}
-                />
-
-                <p className="creditonals-already1 mt-4">
-                  Your business is now live and ready to shine.
+              {isAvailable === true && businessName && (
+                <p className="mt-2" style={{ color: "green" }}>
+                  ✅ Business name available
                 </p>
+              )}
 
-                <div className="d-flex align-items-center justify-content-start gap-2 mt-3 p-2 globe-input">
-                  <img src={globe} width={24} height={24} alt="globe" />
+              {isAvailable === false && (
+                <p className="mt-2" style={{ color: "darkred" }}>
+                  ⚠️ Business name not available
+                </p>
+              )}
 
-                  <Link
-                    href={businessURL}
-                    className="business_url"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {businessURL}
-                  </Link>
-                </div>
+              {isAvailable === false && suggestions.length > 0 && (
+                <>
+                  <div className="mt-3 mb-2 creditionals-text fw-semibold">
+                    Suggestions
+                  </div>
 
-                <button
-                  className="creditional-accountcreate w-100 mt-4"
-                  onClick={() => (window.location.href = "/Admin")}
+                  {suggestions.map((sug, idx) => (
+                    <div className="form-check mb-2" key={idx}>
+                      <input
+                        type="radio"
+                        className="form-check-input"
+                        name="sug"
+                        id={`sug-${idx}`}
+                        onClick={() => {
+                          setBusinessName(sug);
+                          setIsAvailable(true);
+                          setSuggestions([]);
+                        }}
+                      />
+                      <label className="form-check-label ms-2" htmlFor={`sug-${idx}`}>
+                        {sug}
+                      </label>
+                    </div>
+                  ))}
+                </>
+              )}
+
+              <label className="form-label creditionals-text mb-2 mt-4">
+                Tagline (Optional)
+              </label>
+              <input
+                type="text"
+                value={tagline}
+                onChange={(e) => setTagline(e.target.value)}
+                placeholder="Enter your tagline"
+                className="creditionals-input w-100 mt-2 mb-4"
+              />
+
+              <button
+                className="creditional-accountcreate w-100 mb-4 mt-4"
+                onClick={handleProceed}
+                disabled={!isAvailable}
+              >
+                <span className="creditionals-btntext">Proceed</span>
+              </button>
+            </div>
+          )}
+
+          {/* ---------------- SUCCESS STEP ---------------- */}
+          {step === "success" && (
+            <div className="text-center">
+              <div className="creditionals-header mb-5">Congratulations!</div>
+
+              <img
+                src={celebration}
+                alt="celebration"
+                style={{ width: 150, height: 150 }}
+              />
+
+              <p className="creditonals-already1 mt-4">
+                Your business is now live and ready to shine.
+              </p>
+
+              <div className="d-flex align-items-center justify-content-start gap-2 mt-3 p-2 globe-input">
+                <img src={globe} width={24} height={24} alt="globe" />
+
+                <Link
+                  href={businessURL}
+                  className="business_url"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <span className="creditionals-btntext">Continue</span>
-                </button>
+                  {businessURL}
+                </Link>
               </div>
-            )}
 
-          </div>
+              <button
+                className="creditional-accountcreate w-100 mt-4"
+                onClick={() => (window.location.href = "/Admin")}
+              >
+                <span className="creditionals-btntext">Continue</span>
+              </button>
+            </div>
+          )}
+
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
 }

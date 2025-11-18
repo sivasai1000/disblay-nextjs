@@ -4,6 +4,8 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import LeftNav from "@/components/LeftNav";
 import TopNav from "@/components/TopNav";
 import "@/css/admin.css";
+import "@/css/businesscreditionals.css";
+import "@/css/combodetails.css";
 import { useSwipeable } from "react-swipeable";
 import { ChevronDown, ChevronUp } from "lucide-react"; 
 import ComboAddCard from "@/components/ComboAddCard";
@@ -1281,7 +1283,7 @@ router.push("/planselector");
                               color: "#24313E",
                               fontWeight: "700",
                               fontSize: "28px",
-                              fontFamily: "Poppins",
+                              fontFamily: "Manrope",
                             }}
                           >
                             {isLoading
@@ -1435,7 +1437,7 @@ router.push("/planselector");
                                           fontSize: "20px",
                                           color: "#FFFEFE",
                                           fontWeight: "500",
-                                          fontFamily: "poppins",
+                                          fontFamily: "Manrope",
                                         }}
                                       >
                                         + Add
@@ -3164,7 +3166,7 @@ router.push("/planselector");
                       readOnly
                       value={shareLink}
                       className="form-control border-0 p-0 me-2"
-                      style={{ color: "#F62D2D", fontFamily: "poppins", background: "transparent", fontWeight: "500", fontSize: "14px", border: "none" }}
+                      style={{ color: "#F62D2D", fontFamily: "Manrope", background: "transparent", fontWeight: "500", fontSize: "14px", border: "none" }}
                     />
                     <button
                       onClick={() => {
@@ -3838,7 +3840,7 @@ router.push("/planselector");
                         {/* RIGHT SECTION */}
                         <div className="col-md-6 d-flex flex-column justify-content-between">
                           <div>
-                            <h3 style={{ fontWeight: "600", fontFamily: "Poppins" }}>
+                            <h3 style={{ fontWeight: "600", fontFamily: "Manrope" }}>
                               {selectedItem.package_type === "product"
                                 ? selectedItem.product_name
                                 : selectedItem.service_name}
@@ -4031,7 +4033,7 @@ router.push("/planselector");
                     fontSize: "18px",
                     fontWeight: "600",
                     color: "#27A376",
-                    fontFamily: "Poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   Add Product
@@ -4084,7 +4086,7 @@ router.push("/planselector");
                     fontSize: "18px",
                     fontWeight: "600",
                     color: "#27A376",
-                    fontFamily: "Poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   Add Combo

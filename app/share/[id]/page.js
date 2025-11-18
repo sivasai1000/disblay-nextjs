@@ -278,7 +278,7 @@ const QRPage = () => {
         if (res.data?.status === "success") {
           await Swal.fire({
             icon: "success",
-            title: "🎉 Free Subscription Activated!",
+            title: "Free Subscription Activated!",
             text: "Your free subscription was applied successfully.",
             confirmButtonText: "Continue",
           });

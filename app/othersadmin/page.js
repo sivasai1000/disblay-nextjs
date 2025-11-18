@@ -967,7 +967,7 @@ useEffect(() => {
                               color: "#24313E",
                               fontWeight: "700",
                               fontSize: "28px",
-                              fontFamily: "Poppins",
+                              fontFamily: "Manrope",
                             }}
                           >
                             {isLoading
@@ -1114,7 +1114,7 @@ useEffect(() => {
                                           fontSize: "20px",
                                           color: "#FFFEFE",
                                           fontWeight: "500",
-                                          fontFamily: "poppins",
+                                          fontFamily: "Manrope",
                                         }}
                                       >
                                         + Add
@@ -2627,7 +2627,7 @@ useEffect(() => {
           readOnly
           value={shareLink}
           className="form-control border-0 p-0 me-2"
-          style={{ color: "#F62D2D", fontFamily:"poppins", background:"transparent" ,fontWeight: "500", fontSize: "14px",border:"none" }}
+          style={{ color: "#F62D2D", fontFamily:"Manrope", background:"transparent" ,fontWeight: "500", fontSize: "14px",border:"none" }}
         />
         <button
           onClick={() => {
@@ -3257,7 +3257,7 @@ useEffect(() => {
           {/* RIGHT SECTION */}
           <div className="col-md-6 d-flex flex-column justify-content-between">
             <div>
-              <h3 style={{ fontWeight: "600", fontFamily: "Poppins" }}>
+              <h3 style={{ fontWeight: "600", fontFamily: "Manrope" }}>
                 {selectedItem.product_name || selectedItem.service_name}
               </h3>
               <div
@@ -3433,7 +3433,7 @@ useEffect(() => {
                     fontSize: "18px",
                     fontWeight: "600",
                     color: "#27A376",
-                    fontFamily: "Poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   Add Product
@@ -3487,7 +3487,7 @@ onClick={() => {
                     fontSize: "18px",
                     fontWeight: "600",
                     color: "#27A376",
-                    fontFamily: "Poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   Add Combo

@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal } from "react-bootstrap";
 import { useRouter } from "next/navigation";
 import "@/css/usertop.css";
+import "@/css/userdashboard.css";
 import { checkUserMobile, registerUser, loginUser } from "@/components/userapi";
 
 import LoginModal from "./LoginModal";
@@ -378,11 +379,17 @@ const UserTop = ({ business, cartCount }) => {
       {/* ALL MODALS (OWNER / PAYMENTS / DELIVERY / TERMS / HELP / LOGIN) */}
       {/* ------------------------------------------------------------------- */}
 
-      <Modal show={activeModal === "owner"} onHide={handleCloseModal} centered>
-        <Modal.Header className="border-0">
-          <Modal.Title>Owner Information</Modal.Title>
+     <Modal
+        show={activeModal === "owner"}
+        onHide={handleCloseModal}
+        centered
+        dialogClassName="owner-modal"
+      >
+        <Modal.Header className="d-flex justify-content-between align-items-center border-0">
+          <Modal.Title className="modal-owner">Owner Information</Modal.Title>
           <img
             src={modalclose}
+            alt="close"
             width={32}
             height={32}
             style={{ cursor: "pointer" }}
@@ -395,35 +402,95 @@ const UserTop = ({ business, cartCount }) => {
             <img
               src={profileImage}
               alt="Owner"
-              style={{ width: 100, height: 100, borderRadius: "80px", objectFit: "cover" }}
+              style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "80px",
+                objectFit: "cover",
+              }}
             />
           </div>
 
           <div className="row">
+            {/* Name */}
             <div className="col-md-6 mb-3">
-              <label>Name</label>
-              <input type="text" className="form-control" value={business?.business_user_name || ""} disabled />
+              <label className="form-label user-namedetails">Name</label>
+              <input
+                type="text"
+                className="form-control user-inputdetails "
+                value={business?.business_user_name || ""}
+                disabled
+              />
             </div>
 
+            {/* Phone */}
             <div className="col-md-6 mb-3">
-              <label>Phone</label>
-              <input type="text" className="form-control" value={business?.business_mobile || ""} disabled />
+              <label className="form-label user-namedetails">Phone</label>
+              <div
+                className="d-flex align-items-center px-2 user-inputdetails"
+
+              >
+                <div
+                  className="d-flex align-items-center justify-content-center me-2"
+                  style={{
+                    width: "77px",
+                    background: "#f4f4f4",
+                    borderRadius: "6px",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    height: "33px",
+                  }}
+                >
+                  <img
+                    src="https://flagcdn.com/w20/in.png"
+                    alt="India flag"
+                    style={{
+                      width: "20px",
+                      height: "14px",
+                      marginRight: "4px",
+                    }}
+                  />
+                  +91
+                </div>
+                <input
+                  type="text"
+                  value={business?.business_mobile || ""}
+                  className="form-control border-0"
+                  disabled
+                  style={{
+                    background: "transparent",
+                    boxShadow: "none",
+                  }}
+                />
+              </div>
             </div>
           </div>
 
+          {/* Email */}
           <div className="mb-2">
-            <label>Email</label>
-            <input type="email" className="form-control" value={business?.business_email || ""} disabled />
+            <label className="form-label user-namedetails">Email ID</label>
+            <input
+              type="email"
+              className="form-control user-inputdetails"
+              value={business?.business_email || ""}
+              disabled
+            />
           </div>
         </Modal.Body>
       </Modal>
 
       {/* Payment Modal */}
-      <Modal show={activeModal === "payment"} onHide={handleCloseModal} centered>
-        <Modal.Header className="border-0">
-          <Modal.Title>Payment Options</Modal.Title>
+       <Modal
+        show={activeModal === "payment"}
+        onHide={handleCloseModal}
+        centered
+        dialogClassName="owner-modal"
+      >
+        <Modal.Header className="d-flex justify-content-between align-items-center border-0">
+          <Modal.Title className="modal-owner">Payment Options</Modal.Title>
           <img
             src={modalclose}
+            alt="close"
             width={32}
             height={32}
             style={{ cursor: "pointer" }}
@@ -432,29 +499,89 @@ const UserTop = ({ business, cartCount }) => {
         </Modal.Header>
 
         <Modal.Body>
-          <label>UPI ID</label>
-          <input
-            type="text"
-            className="form-control mb-4"
-            value={business?.payment_upi_id || "Not Available"}
-            disabled
-          />
+          {/* UPI ID */}
+          <div className="mb-4">
+            <label className="form-label modal-upitext mb-3">UPI ID</label>
+            <input
+              type="text"
+              className="form-control"
+              value={business?.payment_upi_id || "Not Available"}
+              disabled
+              style={{
+                width: "500px",
+                height: "52px",
+                background: "#27A3761A",
+                border: "1px solid #E2E4E9",
+                borderRadius: "8px",
+                fontSize: "18px",
+                color: "#262626",
+                fontWeight: "600",
+              }}
+            />
+          </div>
 
-          {business?.payment_type?.toLowerCase()?.includes("cod") && (
-            <p>✓ Cash on Delivery</p>
-          )}
+          {/* Payment Methods */}
+          <div className="mb-4">
+            {business?.payment_type &&
+              (business.payment_type.toLowerCase().includes("cod") ||
+                business.payment_type.toLowerCase() === "both") && (
+                <div className="d-flex align-items-center mb-2">
+                  <span
+                    style={{ color: "#27A64B", fontSize: "18px", marginRight: "8px" }}
+                  >
+                    ✓
+                  </span>
+                  <span style={{ fontSize: "20px", fontWeight: "600", color: "#262626" }}>
+                    Cash on Delivery
+                  </span>
+                </div>
+              )}
 
-          {business?.payment_type?.toLowerCase()?.includes("online") && (
-            <p>✓ Online Payments</p>
-          )}
+            {business?.payment_type &&
+              (business.payment_type.toLowerCase().includes("online") ||
+                business.payment_type.toLowerCase() === "both") && (
+                <div className="d-flex align-items-center">
+                  <span
+                    style={{ color: "#27A64B", fontSize: "18px", marginRight: "8px" }}
+                  >
+                    ✓
+                  </span>
+                  <span style={{ fontSize: "20px", fontWeight: "600", color: "#262626" }}>
+                    Online Payments
+                  </span>
+                </div>
+              )}
+          </div>
+
+          {/* Notes */}
+          <div>
+            <div className="user-notepay">Note :</div>
+            <ul className="user-notetextpay mt-3">
+              <li>
+                Please double-check that the UPI ID and the account holder’s name match.
+              </li>
+              <li>
+                If they do not, contact us immediately to confirm before making any payment.
+              </li>
+              <li>
+                Always get a confirmation and payment transfer note from Combo Sender.
+              </li>
+            </ul>
+          </div>
         </Modal.Body>
       </Modal>
 
-      <Modal show={activeModal === "delivery"} onHide={handleCloseModal} centered>
-        <Modal.Header className="border-0">
-          <Modal.Title>Delivery Options</Modal.Title>
+     <Modal
+        show={activeModal === "delivery"}
+        onHide={handleCloseModal}
+        centered
+        dialogClassName="owner-modal"
+      >
+        <Modal.Header className="d-flex justify-content-between align-items-center border-0">
+          <Modal.Title className="modal-owner">Delivery Options</Modal.Title>
           <img
             src={modalclose}
+            alt="close"
             width={32}
             height={32}
             style={{ cursor: "pointer" }}
@@ -463,32 +590,69 @@ const UserTop = ({ business, cartCount }) => {
         </Modal.Header>
 
         <Modal.Body>
-          {business?.delivery_type ? (
-            <p>{business.delivery_type}</p>
-          ) : (
-            <p>No delivery options available</p>
-          )}
+          <div className="mb-3">
+            {business?.delivery_type ? (
+              business.delivery_type.toLowerCase() === "all" ? (
+                <>
+                  {[
+                    "On Demand",
+                    "Next Day Delivery",
+                    "Same-Day Delivery",
+                    "Scheduled Delivery (Inform your preferred Date and Time)",
+                  ].map((type, index) => (
+                    <div className="d-flex align-items-center mb-3" key={index}>
+                      <span
+                        style={{ color: "green", fontSize: "18px", marginRight: "8px" }}
+                      >
+                        ✓
+                      </span>
+                      <span
+                        style={{ fontSize: "20px", fontWeight: "600", color: "#262626" }}
+                      >
+                        {type}
+                      </span>
+                    </div>
+                  ))}
+                </>
+              ) : (
+                business.delivery_type.split(",").map((type, index) => (
+                  <div className="d-flex align-items-center mb-3" key={index}>
+                    <span
+                      style={{ color: "green", fontSize: "18px", marginRight: "8px" }}
+                    >
+                      ✓
+                    </span>
+                    <span style={{ fontSize: "16px", fontWeight: "500" }}>
+                      {type.trim()}
+                    </span>
+                  </div>
+                ))
+              )
+            ) : (
+              <p style={{ fontSize: "14px", color: "#525866" }}>
+                No delivery options available.
+              </p>
+            )}
+          </div>
         </Modal.Body>
       </Modal>
-
+      {/* Terms & Conditions Modal */}
       <Modal show={activeModal === "terms"} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
           <Modal.Title>Terms & Conditions</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>By using our service, you agree to the standard terms.</p>
+          <p>By using our service, you agree to the standard terms & conditions.</p>
         </Modal.Body>
       </Modal>
-
       <Modal show={activeModal === "help"} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
           <Modal.Title>Help</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>If you need assistance, contact support.</p>
+          <p>If you need assistance, please contact our support team.</p>
         </Modal.Body>
       </Modal>
-
       <LoginModal
         activeModal={activeModal}
         handleCloseModal={handleCloseModal}

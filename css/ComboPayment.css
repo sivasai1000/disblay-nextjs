@@ -1,5 +1,5 @@
 .combopayment-head{
-    font-family: Inter;
+    font-family: Manrope;
 font-weight: 500;
 font-style: Medium;
 font-size: 18px;
@@ -11,7 +11,7 @@ color: var(--text-main-900, #0A0D14);
 
 }
 .payment-comboname{
-    font-family: Poppins;
+    font-family: Manrope;
 font-weight: 600;
 font-style: SemiBold;
 font-size: 24px;
@@ -104,7 +104,7 @@ background: #F62D2D12;
 }
 
 .bill-history{
-font-family: Inter;
+font-family: Manrope;
 font-weight: 500;
 font-style: Medium;
 font-size: 18px;
@@ -125,7 +125,7 @@ vertical-align: middle;
 color: #6A7576;
 }
 .billhistory-combovalue{
-    font-family: Poppins;
+    font-family: Manrope;
 font-weight: 500;
 font-style: Medium;
 font-size: 16px;
@@ -137,7 +137,7 @@ color: #045867;
 
 }
 .combopayment-textinput{
-font-family: Poppins;
+font-family: Manrope;
 font-weight: 400;
 font-style: Regular;
 font-size: 16px;

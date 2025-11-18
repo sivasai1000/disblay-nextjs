@@ -239,7 +239,7 @@ router.push("/combodetail");
                   />
                 ) : (
                   <>
-                    <img src={imageplus1.src} width={32} height={32} alt="plus" />
+                    <img src={imageplus1} width={32} height={32} alt="plus" />
                     <div className="mt-2">Poster</div>
                   </>
                 )}
@@ -264,10 +264,10 @@ router.push("/combodetail");
                 />
 
                 {pdf ? (
-                  <img src={viewpdf.src} width={40} height={40} alt="pdf" />
+                  <img src={viewpdf} width={40} height={40} alt="pdf" />
                 ) : (
                   <>
-                    <img src={imagepdf.src} width={32} height={32} alt="pdf" />
+                    <img src={imagepdf} width={32} height={32} alt="pdf" />
                     <div className="mt-2">PDF</div>
                   </>
                 )}
@@ -292,10 +292,10 @@ router.push("/combodetail");
                 />
 
                 {audio ? (
-                  <img src={viewmp3.src} width={40} height={40} alt="mp3" />
+                  <img src={viewmp3} width={40} height={40} alt="mp3" />
                 ) : (
                   <>
-                    <img src={imagemp3.src} width={32} height={32} alt="mp3" />
+                    <img src={imagemp3} width={32} height={32} alt="mp3" />
                     <div className="mt-2">MP3</div>
                   </>
                 )}

@@ -273,7 +273,7 @@ const handleSubmit = async () => {
                   display: "flex",
                   alignItems: "center",
                   gap: 8,
-                  fontFamily: "poppins",
+                  fontFamily: "Manrope",
                   fontSize: "17px",
                   color: "#FF1717",
                   background: "#FF17171A",
@@ -291,7 +291,7 @@ const handleSubmit = async () => {
                     fontSize: 14,
                     lineHeight: "22px",
                     color: "#34495E",
-                    fontFamily: "poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   You're almost done! Please complete the remaining steps to
@@ -307,7 +307,7 @@ const handleSubmit = async () => {
                     fontSize: 14,
                     lineHeight: "22px",
                     color: "#34495E",
-                    fontFamily: "Poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   <p className="mb-1">
@@ -329,7 +329,7 @@ const handleSubmit = async () => {
                     fontSize: 14,
                     lineHeight: "22px",
                     color: "#34495E",
-                    fontFamily: "poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   After our team verifies your enrollment, you’ll earn 20% of
@@ -342,7 +342,7 @@ const handleSubmit = async () => {
                     fontSize: 14,
                     lineHeight: "22px",
                     color: "#F62D2D",
-                    fontFamily: "poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   <strong>Important:</strong> Please do not delete, transfer, or
@@ -356,7 +356,7 @@ const handleSubmit = async () => {
                     fontSize: 13,
                     marginTop: 10,
                     color: "#34495E",
-                    fontFamily: "poppins",
+                    fontFamily: "Manrope",
                   }}
                 >
                   Thank you for building with Disblay! <br /> — Topiko Business

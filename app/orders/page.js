@@ -435,189 +435,157 @@ useEffect(() => {
                     </p>
                   ) : (
                     <>
-                      {todayNotifications.length > 0 && (
-                        <>
+{todayNotifications.length > 0 && (
+  <>
+    {todayNotifications.map((note, index) => {
+      const isCombo = note.type === "combo";
 
-                          {todayNotifications.map((note) => (
-                            note.type === "combo" ? (
-                              <div
-  key={note.package_id}
-  className="notification-cards"
-  onClick={() => {
-    setSelectedNotification(note);
-    fetchPackageNotifications(note.package_id);
-    setShowUserNotification(true);
-  }}
->
-  {/* Top Row: Business Info */}
-  <div className="d-flex align-items-center mb-2">
-    {note.business_logo ? (
-      <img
-        src={`${BASE_URL}/${note.business_logo}`}
-        alt={note.business_name}
-        style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "8px",
-          marginRight: "10px"
-        }}
-      />
-    ) : (
-      <img
-        src={noimage}
-        alt="logo"
-        style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "8px",
-          marginRight: "10px"
-        }}
-      />
-    )}
+      const businessLogo = note.business_logo
+        ? `${BASE_URL}/${note.business_logo}`
+        : noimage;
 
-    <div>
-      <div style={{ fontWeight: "700", fontSize: "15px", color: "#262626" }}>
-        {note.business_name}
-      </div>
-      <div style={{ fontSize: "13px", color: "#777" }}>
-        {moment(note.created || note.created_date).format("DD-MMM-YYYY")}
-      </div>
-    </div>
-  </div>
+      const posterImage = note.package_poster
+        ? `${BASE_URL}/${note.package_poster}`
+        : null;
 
-  {/* Bottom Box: Combo Info with Badge inside */}
-  <div
-    className="d-flex align-items-center justify-content-between"
-    style={{
-      background: "#F5F6FB",
-      borderRadius: "10px",
-      padding: "12px",
-      marginTop: "8px"
-    }}
-  >
-    {/* Left side: Poster + Combo Info */}
-    <div className="d-flex align-items-center">
-      {note.package_poster ? (
-        <img
-          src={`${BASE_URL}/${note.package_poster}`}
-          alt={note.package_name}
-          style={{
-            width: "50px",
-            height: "50px",
-            borderRadius: "8px",
-            marginRight: "10px"
-          }}
-        />
-      ) : (
+      const formattedDate = moment(
+        note.created || note.created_date
+      ).format("DD-MMM-YYYY");
+
+      return (
         <div
-          style={{
-            width: "50px",
-            height: "50px",
-            borderRadius: "8px",
-            backgroundColor: "#f0f0f0",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginRight: "10px"
+          key={`${isCombo ? note.package_id : note.notification_id}-${index}`}
+          className="notification-cards"
+          onClick={() => {
+            setSelectedNotification(note);
+
+            if (isCombo) {
+              fetchPackageNotifications(note.package_id);
+            } else {
+              fetchNotificationById(note.notification_id);
+            }
+
+            setShowUserNotification(true);
           }}
         >
-          <img src={noimage} alt="No preview" style={{ width: "20px", height: "20px" }} />
+
+          {/* ---------------- TOP BUSINESS ROW ---------------- */}
+          <div className="d-flex align-items-center mb-2">
+            <img
+              src={businessLogo}
+              alt={note.business_name}
+              style={{
+                width: "40px",
+                height: "40px",
+                borderRadius: "8px",
+                marginRight: "10px",
+              }}
+            />
+
+            <div>
+              <div
+                style={{
+                  fontWeight: "700",
+                  fontSize: "15px",
+                  color: "#262626",
+                }}
+              >
+                {note.business_name}
+              </div>
+
+              <div style={{ fontSize: "13px", color: "#777" }}>
+                {formattedDate}
+              </div>
+            </div>
+          </div>
+
+          {/* ---------------- MAIN BOX ---------------- */}
+          <div
+            className="d-flex align-items-center justify-content-between"
+            style={{
+              background: "#F5F6FB",
+              borderRadius: "10px",
+              padding: "12px",
+              marginTop: "8px",
+            }}
+          >
+
+            {/* ---- LEFT SECTION ---- */}
+            <div className="d-flex align-items-center">
+              
+              {/* Combo Poster OR Product/Service Icon */}
+              {isCombo ? (
+                posterImage ? (
+                  <img
+                    src={posterImage}
+                    alt={note.package_name}
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "8px",
+                      marginRight: "10px",
+                    }}
+                  />
+                ) : (
+                  <div
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "8px",
+                      backgroundColor: "#f0f0f0",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginRight: "10px",
+                    }}
+                  >
+                    <img
+                      src={noimage}
+                      alt="No poster"
+                      style={{ width: "20px", height: "20px" }}
+                    />
+                  </div>
+                )
+              ) : (
+                <img
+                  src={note.type === "product" ? productlogo : servicelogo}
+                  alt={note.type}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    marginRight: "10px",
+                  }}
+                />
+              )}
+
+              {/* ---- TEXT INFO ---- */}
+              <div>
+                {isCombo ? (
+                  <>
+                    <div className="notification-title">
+                      {note.package_name}
+                    </div>
+                    <div className="notification-sub">
+                      Combo ID : {note.package_code}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="notification-sub">
+                      Order ID : {note.order_number}
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-      )}
-
-      <div>
-        <div className="notification-title">{note.package_name} </div>
-        <div className="notification-sub">Combo ID : {note.package_code}</div>
-      </div>
-    </div>
-
-   
-  </div>
-</div>
-
-                            ) : (
-                              
-<div
-  key={note.notification_id}
-  className="notification-cards"
-  onClick={() => {
-    setSelectedNotification(note);
-    fetchNotificationById(note.notification_id);
-    setShowUserNotification(true);
-  }}
->
-  {/* Top Row: Business Info */}
-  <div className="d-flex align-items-center mb-2">
-    {/* Business Logo */}
-    {note.business_logo ? (
-      <img
-        src={`${BASE_URL}/${note.business_logo}`}
-        alt={note.business_name}
-        style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "8px",
-          marginRight: "10px"
-        }}
-      />
-    ) : (
-      <img
-        src={noimage}
-        alt="logo"
-        style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "8px",
-          marginRight: "10px"
-        }}
-      />
-    )}
-
-    <div>
-      <div style={{ fontWeight: "700", fontSize: "15px", color: "#262626" }}>
-        {note.business_name || note.package_name}
-      </div>
-      <div style={{ fontSize: "13px", color: "#777" }}>
-        {moment(note.created || note.created_date).format("DD-MMM-YYYY")}
-      </div>
-    </div>
-  </div>
-
-  {/* Bottom Box: Order Info */}
-  <div
-    className="d-flex align-items-center justify-content-between"
-    style={{
-      background: "#F5F6FB",
-      borderRadius: "10px",
-      padding: "12px",
-      marginTop: "8px"
-    }}
-  >
-    {/* Left side: Icon + Order Info */}
-    <div className="d-flex align-items-center">
-      <img
-        src={note.type === "product" ? productlogo : servicelogo}
-        alt={note.type === "product" ? "Product" : "Service"}
-        style={{ width: "40px", height: "40px", marginRight: "10px" }}
-      />
-      <div>
-       
-        <div className="notification-sub">Order ID : {note.order_number}</div>
-        
-      </div>
-    </div>
-
-   
-  </div>
-</div>
+      );
+    })}
+  </>
+)}
 
 
-                           
-                            )
-                          ))}
-
-                        </>
-                      )}
                       {previousNotifications.length > 0 && (
                         <>
                          {previousNotifications.map((note, index) => (

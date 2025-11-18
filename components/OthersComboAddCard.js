@@ -45,7 +45,7 @@ const OthersComboAddCard = ({ onAdd }) => {
             fontSize: "20px",
             color: "#FFFEFE",
             fontWeight: "500",
-            fontFamily: "poppins",
+            fontFamily: "Manrope",
           }}
         >
           + Add

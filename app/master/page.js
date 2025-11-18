@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-
+import "@/css/admin.css"
 import LeftNav from "@/components/LeftNav";
 import TopNav from "@/components/TopNav";
 
@@ -26,16 +26,17 @@ export default function Master() {
   // -----------------------------
   const [params, setParams] = useState(null);
 
-  useEffect(() => {
-    const saved = sessionStorage.getItem("masterData");
-    if (!saved) return;
+useEffect(() => {
+  const saved = sessionStorage.getItem("masterState");  // FIXED KEY
+  if (!saved) return;
 
-    try {
-      setParams(JSON.parse(saved));
-    } catch (err) {
-      console.error("Error parsing masterData:", err);
-    }
-  }, []);
+  try {
+    setParams(JSON.parse(saved));
+  } catch (err) {
+    console.error("Error parsing masterState:", err);
+  }
+}, []);
+
 
 let business_id = null;
 let package_id = null;

@@ -119,7 +119,7 @@ vertical-align: middle;
 color: #FFFFFF;
 }
 .cart-headtext{
-font-family: Inter;
+font-family: Manrope;
 font-weight: 500;
 font-style: Medium;
 font-size: 20px;
@@ -204,7 +204,7 @@ color: #363636;
 
 }
 .cart-notetext{
-    font-family: Poppins;
+    font-family: Manrope;
 font-weight: 600;
 font-style: SemiBold;
 font-size: 15px;
@@ -351,7 +351,7 @@ border-image-source: linear-gradient(137.18deg, #FF6161 -6.51%, #F62D2D 104.93%)
 
 }
 .address-detailsname{
-  font-family: Poppins;
+  font-family: Manrope;
 font-weight: 600;
 font-style: SemiBold;
 font-size: 22px;

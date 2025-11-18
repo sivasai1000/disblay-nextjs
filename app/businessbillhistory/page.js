@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import LeftNav from "@/components/LeftNav";
 import TopNav from "@/components/TopNav";
-
+import "@/css/ComboPayment.css"
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";

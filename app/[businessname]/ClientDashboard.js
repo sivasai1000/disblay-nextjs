@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import UserDashboard from "./UserDashboard";
 
-export default function ClientDashboard() {
+export default function ClientDashboard({ ssrPackage, ssrBusiness, businessname }) {
+  
+  // ⭐ Cart state (client only)
   const [cart, setCart] = useState(() => {
     if (typeof window !== "undefined") {
       return JSON.parse(localStorage.getItem("cart")) || { type: null, items: [] };
@@ -22,6 +24,9 @@ export default function ClientDashboard() {
       cart={cart}
       setCart={setCart}
       setBusiness={setBusiness}
+      ssrPackage={ssrPackage}
+      ssrBusiness={ssrBusiness}
+      businessname={businessname}
     />
   );
 }

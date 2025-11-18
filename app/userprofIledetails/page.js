@@ -51,6 +51,7 @@ export default function UserProfileDetails() {
   );
 }
 
+
 // =================================================================
 // CHILD COMPONENT — SAFE HOOK ORDER
 // =================================================================
@@ -105,6 +106,8 @@ function UserProfileDetailsContent({ userId, cartData, business }) {
           cartCount={cartData.items.reduce((sum, i) => sum + (i.qty || 1), 0)}
           onCartClick={() => router.push("/cart")}
         />
+
+        
         <p className="text-danger text-center mt-4">
           Failed to load user details.
         </p>

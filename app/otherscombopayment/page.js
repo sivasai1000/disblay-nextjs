@@ -407,7 +407,7 @@ const handleShareModal = () => {
           readOnly
           value={shareLink}
           className="form-control border-0 p-0 me-2"
-          style={{ color: "#F62D2D", fontFamily:"poppins", background:"transparent" ,fontWeight: "500", fontSize: "14px"}}
+          style={{ color: "#F62D2D", fontFamily:"Manrope", background:"transparent" ,fontWeight: "500", fontSize: "14px"}}
         />
         <button
           onClick={() => {

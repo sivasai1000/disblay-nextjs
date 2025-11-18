@@ -1,17 +1,17 @@
-import "./globals.css";
+import "@/css/LandingPage.css";           // ✔ global CSS
+import "bootstrap/dist/css/bootstrap.min.css"; //
+
 import { ReactQueryProvider } from "@/components/ResctQueryProvider";
 import Head from "next/head";
 import {
   Outfit,
   Righteous,
-  Poppins,
-  Inter,
-  Plus_Jakarta_Sans,
-  Metal,
-  Bebas_Neue,
   Manrope,
+  Metal,
+  
 } from "next/font/google";
 import MobileRedirect from "@/components/MobileRedirect";
+
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -25,23 +25,9 @@ const righteous = Righteous({
   variable: "--font-righteous",
 });
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-});
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-});
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-plusjakarta",
-});
+
 
 const metal = Metal({
   subsets: ["latin"],
@@ -49,11 +35,7 @@ const metal = Metal({
   variable: "--font-metal",
 });
 
-const bebas = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-bebas",
-});
+
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -130,7 +112,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* JSON-LD 2 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -157,11 +138,7 @@ export default function RootLayout({ children }) {
         className={`
           ${outfit.variable}
           ${righteous.variable}
-          ${poppins.variable}
-          ${inter.variable}
-          ${plusJakarta.variable}
-          ${metal.variable}
-          ${bebas.variable}
+          ${metal.variable}     
           ${manrope.variable}
         `}
       >

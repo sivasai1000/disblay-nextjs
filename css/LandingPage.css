@@ -34,7 +34,7 @@
 }
 
 .landing-page .navbar-nav .nav-link {
-  font-family: Inter;
+  font-family: Manrope;
   font-weight: 500;
   font-style: Medium;
   font-size: 14.41px;
@@ -45,6 +45,13 @@
 
 }
 
+.faq-answer.hide {
+  display: none;
+}
+
+.faq-answer.show {
+  display: block;
+}
 
 
 /* Button - Outline Style */
@@ -104,7 +111,7 @@ linear-gradient(360deg, rgba(255, 255, 255, 0) 58.17%, #FFFFFF 100%);
   margin-bottom: 16px;
 
   color: #00000099;
-  font-family: Inter;
+  font-family: Manrope;
   font-weight: 500;
   font-style: Medium;
   font-size: 14px;
@@ -378,7 +385,7 @@ color: #677079;
 }
 
 .footer-heading {
-  font-family: Inter;
+  font-family: Manrope;
 font-weight: 500;
 font-style: Medium;
 font-size: 18px;
@@ -530,7 +537,7 @@ color: #34495E;
 
 }
 .footer-text{
-  font-family: Inter;
+  font-family: Manrope;
 font-weight: 500;
 font-style: Medium;
 font-size: 16px;
@@ -541,7 +548,7 @@ color: #00000099;
 .terms-container {
   background: #fff;
   color: #000;
-  font-family: "Poppins", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .terms-title {

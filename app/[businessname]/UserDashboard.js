@@ -28,7 +28,15 @@ const insta = "/assets/img/insta.svg";
 
 import { useRouter, useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
-const UserDashboard = ({ cart, setCart, setBusiness }) => {
+const UserDashboard = ({ 
+  cart, 
+  setCart, 
+  setBusiness,
+  ssrPackage,
+  ssrBusiness,
+  businessname
+}) => {
+
   // -----------------------------------------------
   // 1. ALL HOOKS MUST BE AT THE TOP (NO RETURNS ABOVE)
   // -----------------------------------------------
@@ -77,23 +85,10 @@ const UserDashboard = ({ cart, setCart, setBusiness }) => {
   // -----------------------------------------------
   // 2. FETCH DATA (Still part of hook area)
   // -----------------------------------------------
-  const { businessname } = useParams();
+  const packageData = ssrPackage;
+const businessData = ssrBusiness;
+const business = businessData?.response;
 
-  const { data: packageData } = usePackageByLink({
-    share_link: `https://disblay.com/${businessname}`,
-  });
-
-  const businessId = packageData?.business_id;
-
-  const { data: businessData } = useUserBusinessDetails({
-    business_id: businessId,
-  });
-console.log("businessData123",businessData)
-  const business = businessData?.response;
-  
-  console.log("Business Data:", businessData);
-console.log("Business:", business);
-console.log("Slug:", business?.business_slug);
 
 useEffect(() => {
   if (!business?.business_slug) return;
@@ -687,9 +682,7 @@ useEffect(() => {
     className="btn add-btn"
     onClick={(e) => {
       e.stopPropagation();
-
       setCart((prev) => {
-        // If cart is empty or undefined
         if (!prev?.items) {
           return {
             type: "service",
@@ -721,10 +714,6 @@ useEffect(() => {
     <div className="add-text">Schedule Call</div>
   </button>
 )}
-
-
-
-
                             </div>
                           </div>
                         </div>
@@ -1013,7 +1002,7 @@ router.push("/cart", { state: { fromTab: "combos" } });
           readOnly
           value={shareLink}
           className="form-control border-0 p-0 me-2"
-          style={{ color: "#F62D2D", fontFamily:"poppins", background:"transparent" ,fontWeight: "500", fontSize: "14px"}}
+          style={{ color: "#F62D2D", fontFamily:"Manrope", background:"transparent" ,fontWeight: "500", fontSize: "14px"}}
         />
         <button
           onClick={() => {
@@ -1030,7 +1019,6 @@ router.push("/cart", { state: { fromTab: "combos" } });
     </div>
   </div>
 )}
-
           {activeTab === "connect" && <ConnectTab business={business} />}
         </div>
       </div>
