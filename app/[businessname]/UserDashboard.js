@@ -26,7 +26,7 @@ const telegram1 = "/assets/img/telegram1.svg";
 const closeImg = "/assets/img/close.svg";
 const insta = "/assets/img/insta.svg";
 
-import { useRouter, useParams, useSearchParams } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 const UserDashboard = ({ 
   cart, 

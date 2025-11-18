@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import '@/css/Notifications.css';
 import { Modal } from "react-bootstrap";
 import moment from 'moment';
@@ -68,8 +68,7 @@ const ucall = "/assets/img/ucall1.svg";
 const router = useRouter();
 
 
-    const searchParams = useSearchParams();
-const businessId = searchParams.get("business_id");
+
 
 
     const userId = localStorage.getItem("userId");
