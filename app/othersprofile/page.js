@@ -1,4 +1,6 @@
 // src/components/Profile.js
+"use client"
+
 import React, { useState, useEffect } from "react";
 import LeftNav from "@/components/OthersLeftNav";
 import TopNav from "@/components/OthersTopNav";
