@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter} from "next/navigation";
 import LeftNav from "@/components/LeftNav";
 import "@/css/businesscreditionals.css"
 import TopNav from "@/components/TopNav";
@@ -13,11 +13,7 @@ import Link from "next/link";
 
 export default function Success() {
   const router = useRouter();
-  const searchParams = useSearchParams();
 
-  // Read from URL params first
-  const shareLinkParam = searchParams.get("shareLink");
-  const durationParam = searchParams.get("durationDays");
 
  
   const getSessionState = () => {

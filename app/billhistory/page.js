@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import TopNav from "@/components/TopNav";
 import LeftNav from "@/components/LeftNav";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter} from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Link from "next/link";
@@ -22,11 +22,14 @@ const fetchBillHistory = async ({ queryKey }) => {
 
 export default function BillHistory() {
   const router = useRouter();
-  const params = useSearchParams();
+ 
 
   // Get values passed from previous page
-  const packageId = params.get("packageId");
-  const packageName = params.get("packageName");
+const historyData = JSON.parse(sessionStorage.getItem("historyData") || "{}");
+
+const packageId = historyData.packageId;
+const packageName = historyData.packageName;
+
 
   // localStorage → needs client check
   const [businessId, setBusinessId] = useState(null);

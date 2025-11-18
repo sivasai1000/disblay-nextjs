@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import '@/css/Notifications.css';
 import { Modal } from "react-bootstrap";
 import LeftNav from "@/components/LeftNav";
@@ -72,8 +72,7 @@ const ucall = "/assets/img/ucall1.svg";
 const router = useRouter();
 
 
-    const searchParams = useSearchParams();
-const businessId = searchParams.get("business_id");
+
 
      const [userId, setUserId] = useState("");
   const [businessSlug, setBusinessSlug] = useState("");

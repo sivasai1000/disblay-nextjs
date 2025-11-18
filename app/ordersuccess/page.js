@@ -7,15 +7,16 @@ const successfullysent = "/assets/img/successfullysent.svg";
 const whatsappIcon = "/assets/img/whats.svg";
 const bookmark = "/assets/img/Bookmark.svg";
 
-import { useSearchParams, useRouter } from "next/navigation";
+import {  useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function OrderSuccess({ business, setCart }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const storedData = JSON.parse(sessionStorage.getItem("orderSuccessData") || "{}");
 
-  const type = searchParams.get("type");
-  const comboCategory = searchParams.get("comboCategory");
+const type = storedData.type;
+const comboCategory = storedData.comboCategory;
+
 
   let successMessage = "";
   let whatsappMessage = "";

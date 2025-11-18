@@ -267,7 +267,16 @@ const { data: businessDetails, isLoading, isError } = useUserBusinessDetails(
         localStorage.removeItem("cart");
 
         // App Router does not support passing state; use push only
-        router.push("/ordersuccess");
+       sessionStorage.setItem(
+  "orderSuccessData",
+  JSON.stringify({
+    type: cart.type,
+    comboCategory: cart.items[0]?.comboCategory || null,
+  })
+);
+
+router.push("/ordersuccess");
+
       } else {
         await Swal.fire({
           icon: "error",
