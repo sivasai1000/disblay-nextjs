@@ -1,22 +1,37 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import UserTop from "@/components/UserTop";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const successfullysent = "/assets/img/successfullysent.svg";
 const whatsappIcon = "/assets/img/whats.svg";
 const bookmark = "/assets/img/Bookmark.svg";
 
-import {  useRouter } from "next/navigation";
-import Link from "next/link";
-
 export default function OrderSuccess({ business, setCart }) {
   const router = useRouter();
-  const storedData = JSON.parse(sessionStorage.getItem("orderSuccessData") || "{}");
 
-const type = storedData.type;
-const comboCategory = storedData.comboCategory;
+  const [type, setType] = useState("");
+  const [comboCategory, setComboCategory] = useState("");
 
+  // Read sessionStorage on client only
+  useEffect(() => {
+    const stored = sessionStorage.getItem("orderSuccessData");
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      setType(parsed.type || "");
+      setComboCategory(parsed.comboCategory || "");
+    }
+  }, []);
+
+  // Clear cart on client only
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("cart");
+      if (setCart) setCart({ type: null, items: [] });
+    }
+  }, [setCart]);
 
   let successMessage = "";
   let whatsappMessage = "";
@@ -49,11 +64,6 @@ const comboCategory = storedData.comboCategory;
       "Hi, kindly update me on the status at www.disblay.com";
   }
 
-  useEffect(() => {
-    localStorage.removeItem("cart");
-    if (setCart) setCart({ type: null, items: [] });
-  }, [setCart]);
-
   return (
     <div className="user-home">
       <UserTop
@@ -80,9 +90,9 @@ const comboCategory = storedData.comboCategory;
           </div>
 
           <Link
-            href={`https://wa.me/91${business?.business_mobile || ""}?text=${encodeURIComponent(
-              whatsappMessage
-            )}`}
+            href={`https://wa.me/91${
+              business?.business_mobile || ""
+            }?text=${encodeURIComponent(whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn success-whatsapp d-flex align-items-center justify-content-center mx-auto"
@@ -91,11 +101,7 @@ const comboCategory = storedData.comboCategory;
             <img
               src={whatsappIcon}
               alt="WhatsApp"
-              style={{
-                width: "26px",
-                height: "26px",
-                marginRight: "8px",
-              }}
+              style={{ width: "26px", height: "26px", marginRight: "8px" }}
             />
             <span className="success-whatsapptext">WhatsApp</span>
           </Link>
