@@ -5,6 +5,8 @@ import TopNav from "@/components/TopNav";
 import { FaCrosshairs } from "react-icons/fa6";
 import AddCombo from "@/components/OthersAddCombo";
 import "@/css/admin.css";
+import "@/css/businesscreditionals.css";
+import "@/css/combodetails.css";
 
 
 const share = "/assets/img/share.svg";
