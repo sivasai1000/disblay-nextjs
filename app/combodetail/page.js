@@ -1299,7 +1299,7 @@ useEffect(() => {
         color:"#27A64B"
       }}
        onClick={() => {
-    router.push("/combopayment", {
+    router.push("/ComboPayment", {
       state: {
         businessId: combo?.business_id,
         packageId: packageInfo?.id,
