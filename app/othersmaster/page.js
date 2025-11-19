@@ -19,14 +19,29 @@ export default function OthersMaster() {
  
    const router = useRouter();
 
-  // Props passed from ComboDetail
-  const business_id = sessionStorage.getItem("business_id");
-const package_id = sessionStorage.getItem("package_id");
-const menuType = sessionStorage.getItem("menuType");
-const category_id = sessionStorage.getItem("category_id");
+// SAFE STATES
+const [business_id, setBusinessId] = useState(null);
+const [package_id, setPackageId] = useState(null);
+const [menuType, setMenuType] = useState("");
+const [category_id, setCategoryId] = useState("");
 
-const assignedIds = JSON.parse(sessionStorage.getItem("assignedIds") || "[]");
-const assignedIdservice = JSON.parse(sessionStorage.getItem("assignedIdservice") || "[]");
+const [assignedIds, setAssignedIds] = useState([]);
+const [assignedIdservice, setAssignedIdservice] = useState([]);
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    setBusinessId(sessionStorage.getItem("business_id") || null);
+    setPackageId(sessionStorage.getItem("package_id") || null);
+    setMenuType(sessionStorage.getItem("menuType") || "");
+    setCategoryId(sessionStorage.getItem("category_id") || "");
+
+    const savedAssigned = sessionStorage.getItem("assignedIds");
+    const savedAssignedService = sessionStorage.getItem("assignedIdservice");
+
+    setAssignedIds(savedAssigned ? JSON.parse(savedAssigned) : []);
+    setAssignedIdservice(savedAssignedService ? JSON.parse(savedAssignedService) : []);
+  }
+}, []);
 
 
   const [selectedItems, setSelectedItems] = useState([]);

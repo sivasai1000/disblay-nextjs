@@ -10,11 +10,21 @@ import Swal from "sweetalert2";
 
 export default function OthersProfile() {
     const defaultProfile = "/assets/img/defaultprofile.svg"
-  const businessId = JSON.parse(localStorage.getItem("businessId"));
+ const [businessId, setBusinessId] = useState(null);
 
-  const { data, isLoading, refetch } = useBusinessDetails({
-    business_id: businessId,
-  });
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    const stored = localStorage.getItem("businessId");
+    setBusinessId(stored ? JSON.parse(stored) : null);
+  }
+}, []);
+
+
+  const { data, isLoading, refetch } = useBusinessDetails(
+  { business_id: businessId },
+  { enabled: !!businessId }   // runs only when ready
+);
+
 
   const { mutateAsync: updateBusiness } = useUpdateBusiness();
 

@@ -13,11 +13,20 @@ const OthersPlanSelector = () => {
   
   const router = useRouter();
 
-  // ✅ get business/package info from navigation state
-  const packageCode = sessionStorage.getItem("packageCode");
-const packageId = sessionStorage.getItem("packageId");
-const businessId = sessionStorage.getItem("businessId");
-const planFor = sessionStorage.getItem("plan_for") || "business";
+  const [packageCode, setPackageCode] = useState("");
+const [packageId, setPackageId] = useState(null);
+const [businessId, setBusinessId] = useState(null);
+const [planFor, setPlanFor] = useState("business");
+
+React.useEffect(() => {
+  if (typeof window !== "undefined") {
+    setPackageCode(sessionStorage.getItem("packageCode") || "");
+    setPackageId(sessionStorage.getItem("packageId") || null);
+    setBusinessId(sessionStorage.getItem("businessId") || null);
+    setPlanFor(sessionStorage.getItem("plan_for") || "business");
+  }
+}, []);
+
 
 
   // ✅ fetch plans

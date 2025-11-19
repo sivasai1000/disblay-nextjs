@@ -33,8 +33,8 @@ export default function Success() {
 
   const sessionState = getSessionState();
 
-  const shareLink = shareLinkParam || sessionState.shareLink || "";
-  const durationDays = durationParam || sessionState.durationDays || "";
+  const shareLink = sessionState.shareLink || "";
+  const durationDays = sessionState.durationDays || "";
 
   const [showShareModal, setShowShareModal] = React.useState(false);
   const [copied, setCopied] = React.useState(false);

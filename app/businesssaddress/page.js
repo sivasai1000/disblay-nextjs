@@ -11,9 +11,18 @@ import Swal from "sweetalert2";
 
 export default function BusinessSavedAddress() {
   
-  const userId = localStorage.getItem("userId");
+  const [userId, setUserId] = useState(null);
 
-  const { data, refetch } = useUserAddress({ user_id: userId });
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    setUserId(localStorage.getItem("userId"));
+  }
+}, []);
+
+const { data, refetch } = useUserAddress(
+  userId ? { user_id: userId } : { enabled: false }
+);
+
   const u = data?.res;
 
   const updateAddress = useUpdateUserAddress();

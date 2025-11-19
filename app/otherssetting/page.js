@@ -18,12 +18,22 @@ const truck = "/assets/img/truck.svg";
 const redtruck = "/assets/img/redtruck.svg";
 const redpay = "/assets/img/redpay.svg";
 
-    const businessId = JSON.parse(localStorage.getItem("businessId"));
+   const [businessId, setBusinessId] = useState(null);
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    const stored = localStorage.getItem("businessId");
+    setBusinessId(stored ? JSON.parse(stored) : null);
+  }
+}, []);
+
     const BASE_URL = process.env.NEXT_PUBLIC_API_URL_APP_API_URL;
 
-    const { data, isLoading, refetch } = useBusinessDetails({
-        business_id: businessId,
-    });
+   const { data, isLoading, refetch } = useBusinessDetails(
+  { business_id: businessId },
+  { enabled: !!businessId } // <-- ensures it runs only when ready
+);
+
 
     const { mutateAsync: updateBusiness } = useUpdateBusiness();
 

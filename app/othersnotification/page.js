@@ -33,7 +33,14 @@ const OthersNotification = () => {
    const queryClient = useQueryClient();
  
     const router = useRouter();
-  const businessId = localStorage.getItem("businessId") || "";
+  const [businessId, setBusinessId] = useState("");
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    setBusinessId(localStorage.getItem("businessId") || "");
+  }
+}, []);
+
 
   const [notifications, setNotifications] = useState([]);
   const [showModal, setShowModal] = useState(false);

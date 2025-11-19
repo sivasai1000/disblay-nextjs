@@ -69,11 +69,22 @@ const router = useRouter();
 
 
 
+// ❌ REMOVE these unsafe lines
+// const userId = localStorage.getItem("userId");
+// const business_slug = localStorage.getItem("business_slug1");
+
+// ✅ REPLACE WITH THIS
+const [userId, setUserId] = useState(null);
+const [business_slug, setBusiness_slug] = useState(null);
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    setUserId(localStorage.getItem("userId"));
+    setBusiness_slug(localStorage.getItem("business_slug1"));
+  }
+}, []);
 
 
-    const userId = localStorage.getItem("userId");
-    
-    const business_slug = localStorage.getItem("business_slug1")
     useEffect(() => {
         const fetchNotifications = async () => {
             setLoading(true);
