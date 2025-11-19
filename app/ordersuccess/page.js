@@ -16,29 +16,38 @@ export default function OrderSuccess({ business, setCart }) {
   const [comboCategory, setComboCategory] = useState("");
   const [businessSlug, setBusinessSlug] = useState("");
 
-  // Read sessionStorage on client only
+  // Read sessionStorage + localStorage safely .............................
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const stored = sessionStorage.getItem("orderSuccessData");
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      setType(parsed.type || "");
-      setComboCategory(parsed.comboCategory || "");
+    try {
+      const stored = sessionStorage.getItem("orderSuccessData");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        setType(parsed?.type ?? "");
+        setComboCategory(parsed?.comboCategory ?? "");
+      }
+    } catch (err) {
+      console.warn("Invalid JSON in sessionStorage: orderSuccessData");
     }
 
-    // read business slug
-    setBusinessSlug(localStorage.getItem("business_slug") || "");
+    const slug = localStorage.getItem("business_slug");
+    setBusinessSlug(slug ?? "");
   }, []);
 
-  // Clear cart on client only
+  // Clear cart on component mount only ....................................
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     localStorage.removeItem("cart");
-    if (setCart) setCart({ type: null, items: [] });
-  }, [setCart]);
+    if (typeof setCart === "function") {
+      setCart({ type: null, items: [] });
+    }
+  }, []);
 
+  // -------------------------------------
+  // SUCCESS TEXT LOGIC
+  // -------------------------------------
   let successMessage = "";
   let whatsappMessage = "";
 
@@ -70,6 +79,10 @@ export default function OrderSuccess({ business, setCart }) {
       "Hi, kindly update me on the status at www.disblay.com";
   }
 
+  // -------------------------------------
+  // UI
+  // -------------------------------------
+
   return (
     <div className="user-home">
       <UserTop
@@ -89,16 +102,18 @@ export default function OrderSuccess({ business, setCart }) {
             style={{ maxWidth: "400px", height: "326px", marginBottom: "20px" }}
           />
 
-          <div className="success-update mt-4 mb-4">{successMessage}</div>
+          <div className="success-update mt-4 mb-4">
+            {successMessage}
+          </div>
 
           <div className="success-update1 mt-4 mb-4">
             For quicker updates, please call or WhatsApp them directly.
           </div>
 
           <Link
-            href={`https://wa.me/91${
-              business?.business_mobile || ""
-            }?text=${encodeURIComponent(whatsappMessage)}`}
+            href={`https://wa.me/91${business?.business_mobile || ""}?text=${encodeURIComponent(
+              whatsappMessage
+            )}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn success-whatsapp d-flex align-items-center justify-content-center mx-auto"
