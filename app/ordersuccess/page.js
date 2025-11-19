@@ -185,6 +185,3 @@ export default function OrderSuccess({ business, setCart }) {
     </div>
   );
 }
-export async function getServerSideProps() {
-  return { props: {} };
-}

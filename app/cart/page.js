@@ -242,31 +242,30 @@ const { data: businessDetails, isLoading, isError } = useUserBusinessDetails(
 
       const res = await addNotification(payload);
 
-      if (res.status === "success") {
-        await Swal.fire({
-          icon: "success",
-          title: "Order Placed!",
-          text: "Your order has been submitted successfully.",
-          timer: 1500,
-          showConfirmButton: false,
-        });
+     if (res.status === "success") {
+  await Swal.fire({
+    icon: "success",
+    title: "Order Placed!",
+    text: "Your order has been submitted successfully.",
+    timer: 1500,
+    showConfirmButton: false,
+  });
 
-        // clear cart
-        updateCart("clear");
-        localStorage.removeItem("cart");
+  // clear cart
+  updateCart("clear");
+  localStorage.removeItem("cart");
 
-        // App Router does not support passing state; use push only
-        sessionStorage.setItem(
-  "orderSuccessData",
-  JSON.stringify({
-    type: cart.type,
-    comboCategory: cart.items[0]?.comboCategory || null,
-  })
-);
+  sessionStorage.setItem(
+    "orderSuccessData",
+    JSON.stringify({
+      type: cartData.type, // FIXED
+      comboCategory: cartData.items[0]?.comboCategory || null, // FIXED
+    })
+  );
 
-router.push("/ordersuccess");
-
-      } else {
+  router.push("/ordersuccess");
+}
+ else {
         await Swal.fire({
           icon: "error",
           title: "Failed to Place Order",
