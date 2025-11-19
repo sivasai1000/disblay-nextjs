@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import TopNav from "@/components/TopNav";
 import LeftNav from "@/components/LeftNav";
 
-import { useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Link from "next/link";
@@ -22,32 +22,32 @@ const fetchBillHistory = async ({ queryKey }) => {
 
 export default function BillHistory() {
   const router = useRouter();
- 
 
-  // Get values passed from previous page
-const historyData = JSON.parse(sessionStorage.getItem("historyData") || "{}");
-
-const packageId = historyData.packageId;
-const packageName = historyData.packageName;
-
-
-  // localStorage → needs client check
+  const [packageId, setPackageId] = useState(null);
+  const [packageName, setPackageName] = useState(null);
   const [businessId, setBusinessId] = useState(null);
 
+  // Read sessionStorage safely
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setBusinessId(localStorage.getItem("businessId"));
+    if (typeof window === "undefined") return;
+
+    const stored = sessionStorage.getItem("historyData");
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      setPackageId(parsed.packageId || null);
+      setPackageName(parsed.packageName || null);
     }
+
+    setBusinessId(localStorage.getItem("businessId"));
   }, []);
 
-  // API call (only after IDs load)
   const { data, isLoading } = useQuery({
     queryKey: ["billHistory", { businessId, packageId }],
     queryFn: fetchBillHistory,
     enabled: !!businessId && !!packageId,
   });
 
-  if (isLoading || !businessId) {
+  if (isLoading || !businessId || !packageId) {
     return (
       <div className="d-flex min-vh-100" style={{ background: "#F4F5FB" }}>
         <LeftNav />
@@ -98,7 +98,6 @@ const packageName = historyData.packageName;
                       boxShadow: "0px 0px 8px 0px #0000000A",
                     }}
                   >
-                    {/* Left side */}
                     <div>
                       <div className="billhistory-comboid">Combo ID</div>
                       <div className="billhistory-combovalue mt-2">
@@ -113,7 +112,6 @@ const packageName = historyData.packageName;
                       </div>
                     </div>
 
-                    {/* Right side */}
                     <div className="text-end">
                       <div className="billhistory-comboid">Created On</div>
 

@@ -14,23 +14,29 @@ export default function OrderSuccess({ business, setCart }) {
 
   const [type, setType] = useState("");
   const [comboCategory, setComboCategory] = useState("");
+  const [businessSlug, setBusinessSlug] = useState("");
 
   // Read sessionStorage on client only
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const stored = sessionStorage.getItem("orderSuccessData");
     if (stored) {
       const parsed = JSON.parse(stored);
       setType(parsed.type || "");
       setComboCategory(parsed.comboCategory || "");
     }
+
+    // read business slug
+    setBusinessSlug(localStorage.getItem("business_slug") || "");
   }, []);
 
   // Clear cart on client only
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("cart");
-      if (setCart) setCart({ type: null, items: [] });
-    }
+    if (typeof window === "undefined") return;
+
+    localStorage.removeItem("cart");
+    if (setCart) setCart({ type: null, items: [] });
   }, [setCart]);
 
   let successMessage = "";
@@ -106,7 +112,6 @@ export default function OrderSuccess({ business, setCart }) {
             <span className="success-whatsapptext">WhatsApp</span>
           </Link>
 
-          {/* TWO BUTTONS */}
           <div
             className="d-flex justify-content-between mt-4 mx-auto"
             style={{ gap: "100px" }}
@@ -120,9 +125,7 @@ export default function OrderSuccess({ business, setCart }) {
                 height: "48px",
                 borderRadius: "8px",
               }}
-              onClick={() =>
-                router.push(`/${localStorage.getItem("business_slug")}`)
-              }
+              onClick={() => router.push(`/${businessSlug}`)}
             >
               Done
             </button>
