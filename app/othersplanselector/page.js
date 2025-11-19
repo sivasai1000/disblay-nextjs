@@ -20,7 +20,7 @@ const [planFor, setPlanFor] = useState("business");
 
 React.useEffect(() => {
   if (typeof window !== "undefined") {
-    setPackageCode(sessionStorage.getItem("packageCode") || "");
+    setPackageCode(sessionStorage.getItem("packageCode") || undefined);
     setPackageId(sessionStorage.getItem("packageId") || null);
     setBusinessId(sessionStorage.getItem("businessId") || null);
     setPlanFor(sessionStorage.getItem("plan_for") || "business");
