@@ -21,10 +21,12 @@ export default function BusinessNewSavedAddress() {
     }
   }, []);
 
-  // Wait until userId loads
-  const { data, refetch } = useUserAddress(
-    userId ? { user_id: userId } : { enabled: false }
-  );
+
+
+  const { data, refetch } = useUserAddress({
+  user_id: userId,
+  enabled: !!userId,   // important
+});
 
   const u = data?.res;
 
