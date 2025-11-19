@@ -120,6 +120,12 @@ useEffect(() => {
       </div>
     );
   }
+const tabList = [
+  { key: "home", label: "Home" },
+  { key: "combos", label: "Combos" },
+  { key: "about", label: "About Us" },
+  { key: "connect", label: "Connect" }
+];
 
   // -----------------------------------------------
   // 5. SAFE TO USE business HERE
@@ -409,24 +415,22 @@ useEffect(() => {
           {/* Tabs */}
           <div className="mb-4">
             <ul className="nav nav-tabs user-tabs">
-              {["Home", "Combos", "About us", "Connect"].map((tab) => {
-                const tabKey = tab.toLowerCase();
-                return (
-                  <li className="nav-item" key={tab}>
-                    <button
-                      className={`nav-link ${activeTab === tabKey ? "active" : ""
-                        }`}
-                      onClick={() => setActiveTab(tabKey)}
-                    >
-                      {tab}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+  {tabList.map((tab) => (
+    <li className="nav-item" key={tab.key}>
+      <button
+        className={`nav-link ${activeTab === tab.key ? "active" : ""}`}
+        onClick={() => setActiveTab(tab.key)}
+      >
+        {tab.label}
+      </button>
+    </li>
+  ))}
+</ul>
+
           </div>
           {/* ---------------- TAB CONTENT ---------------- */}
-          {activeTab === "home" && (
+         <div className={activeTab === "home" ? "" : "tab-hidden"}>
+
             <>
               {/* ✅ Products Section */}
               {packageData.response.items?.some((i) => i.package_type === "product") && (
@@ -722,9 +726,9 @@ useEffect(() => {
                 </>
               )}
             </>
-          )}
+          </div>
 
-       {activeTab === "combos" && (
+      <div className={activeTab === "combos" ? "" : "tab-hidden"}>
   <>
     {/* 🔹 Helper Slugify Function */}
     {(() => {
@@ -934,10 +938,13 @@ router.push("/cart", { state: { fromTab: "combos" } });
       );
     })()}
   </>
-)}
+</div>
 
 
-          {activeTab === "about us" && <AboutTab business={business} />}
+         <div className={activeTab === "about" ? "" : "tab-hidden"}>
+  <AboutTab business={business} />
+</div>
+
           {showShareModal && (
   <div
     className="transparent-overlay d-flex justify-content-center align-items-center px-4"
@@ -1019,7 +1026,10 @@ router.push("/cart", { state: { fromTab: "combos" } });
     </div>
   </div>
 )}
-          {activeTab === "connect" && <ConnectTab business={business} />}
+<div className={activeTab === "connect" ? "" : "tab-hidden"}>
+  <ConnectTab business={business} />
+</div>
+
         </div>
       </div>
     </div>
