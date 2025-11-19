@@ -1,4 +1,4 @@
-/* Scope all styles .nside .landing-page */
+
 .landing-page {
   font-family: Manrope;
   color: #222;
@@ -13,13 +13,10 @@
   background: hsl(0, 0%, 100%);
   border-radius: 12px;
   border: 0.9px solid #E0E0E0;
-  /* Rounded corners */
-
   margin: 15px auto;
-  /* Space around navbar */
   max-width: 95%;
   height: 70px !important;
-  /* Like your second screenshot */
+  
 }
 
 .landing-page .landing-logo {

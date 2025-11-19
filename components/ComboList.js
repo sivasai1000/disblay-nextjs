@@ -49,7 +49,7 @@ const handleOpenDetail = (combo) => {
   const handleBuyNow = () => {
     if (!selectedCombo) return;
    sessionStorage.setItem(
-  "planData",
+  "planSelectorState",
   JSON.stringify({
     packageCode: selectedCombo.package_code,
     packageId: selectedCombo.id,
