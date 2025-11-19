@@ -284,7 +284,7 @@ color: #295672;
  font-family: Manrope;
 font-weight: 500;
 font-style: Medium;
-font-size: 20px;
+font-size: 18px;
 background: linear-gradient(137.18deg, #FF6161 -6.51%, #F62D2D 104.93%);
   -webkit-background-clip: text;   /* For Chrome/Safari */
   -webkit-text-fill-color: transparent; /* Makes gradient visible */
@@ -504,7 +504,7 @@ color: #6C7783;
 }
 .perfect-sellerstext{
   font-family: Manrope;
-font-weight: 600;
+font-weight: 700;
 font-style: SemiBold;
 font-size: 20px;
 line-height: 124%;
